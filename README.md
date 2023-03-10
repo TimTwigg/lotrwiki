@@ -11,6 +11,6 @@ Middle Earth is history's most complex and meticulously created fantasy world. W
 This wiki explains some general lore, provides some utilities for understanding and interacting with Middle Earth,
 and chronicles the adventures of a certain as-yet-unnamed group of adventurers.
 
-## Gatsby
+## Gatsby <img alt = "Gatsby" src = "src/images/icon.png" width = "30"/>
 
-<img alt = "Gatsby" src = "src/images/icon.png" width = "20"/> This website was built using Gatsby, a React framework.
+This website was built using <a href = "https://www.gatsbyjs.com/">Gatsby</a>, a React framework.
