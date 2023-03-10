@@ -13,5 +13,4 @@ and chronicles the adventures of a certain as-yet-unnamed group of adventurers.
 
 ## Gatsby
 
-<img alt = "Gatsby" src = "src/images/icon.png" width = "20"/>
-This website was built using Gatsby, a React framework.
+<img alt = "Gatsby" src = "src/images/icon.png" width = "20"/> This website was built using Gatsby, a React framework.
