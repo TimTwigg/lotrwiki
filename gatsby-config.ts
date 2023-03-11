@@ -11,7 +11,7 @@ const config: GatsbyConfig = {
         {
             resolve: "gatsby-plugin-manifest",
             options: {
-                icon: "src/images/oneRing.png"
+                icon: "src/images/oneRingIcon.png"
             }
         }
     ]

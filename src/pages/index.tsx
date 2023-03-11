@@ -4,11 +4,16 @@ import Layout from "../components/layout"
 
 const IndexPage: React.FC<PageProps> = () => {
     return (
-        <Layout pageTitle = "Home">
+        <Layout title = "Home">
             <div>
-                <p>Test</p>
+                <h1>Welcome to Middle Earth</h1>
                 <hr/>
-                <p>Test 2</p>
+                <p>
+                    Middle Earth is history's most complex and meticulously created fantasy world. Where better to play some D&D?
+                    <br/>
+                    This wiki explains some general lore, provides some utilities for understanding Middle Earth, and chronicles the 
+                    adventures of a certain as-yet-unnamed group of adventurers.
+                </p>
             </div>
         </Layout>
     )
