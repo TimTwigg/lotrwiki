@@ -27,7 +27,7 @@ const Layout = ({ title, children } : DataProps) => {
                 <h3>LOTR Campaign Wiki</h3>
                 <div className = "links">
                     {title != "Home" && <Link to = "/">Home</Link>}
-                    {title != "Calendar" && <Link to = "/">Calendar</Link>}
+                    {title != "Calendar" && <Link to = "/calendar">Calendar</Link>}
                     {title != "Wilderness" && <Link to = "/">Wilderness</Link>}
                     {title != "The Company" && <Link to = "/">The Company</Link>}
                     {title != "Link 4" && <Link to = "">Link 4</Link>}

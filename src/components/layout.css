@@ -202,10 +202,8 @@ footer {
     width: 80%;
     margin: auto;
     border-radius: 10px;
-}
-
-.contentLinks a {
-    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 /*

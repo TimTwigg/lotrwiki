@@ -13,7 +13,8 @@ const config: GatsbyConfig = {
             options: {
                 icon: "src/images/oneRingIcon.png"
             }
-        }
+        },
+        "gatsby-plugin-anchor-links"
     ]
 }
 
