@@ -1,8 +1,9 @@
 import type { GatsbyConfig } from "gatsby"
 
 const config: GatsbyConfig = {
+    pathPrefix: "/lotrwiki",
     siteMetadata: {
-        siteUrl: "https://timtwigg.github.io/lotrwiki",
+        siteUrl: "https://timtwigg.github.io/lotrwiki"
     },
     graphqlTypegen: true,
     plugins: [
@@ -11,11 +12,12 @@ const config: GatsbyConfig = {
         {
             resolve: "gatsby-plugin-manifest",
             options: {
-                icon: "src/images/oneRingIcon.png"
+                start_url: ".",
+                icon: "src/images/oneRingIcon.png",
+                display: "standalone"
             }
         },
         "gatsby-plugin-anchor-links",
-        "gatsby-plugin-sharp",
         {
             resolve: "gatsby-source-filesystem",
             options: {
