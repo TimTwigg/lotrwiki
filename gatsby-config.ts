@@ -14,7 +14,15 @@ const config: GatsbyConfig = {
                 icon: "src/images/oneRingIcon.png"
             }
         },
-        "gatsby-plugin-anchor-links"
+        "gatsby-plugin-anchor-links",
+        "gatsby-plugin-sharp",
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: "pages",
+                path: `${__dirname}/src/pages`
+            }
+        }
     ]
 }
 

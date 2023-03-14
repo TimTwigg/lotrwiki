@@ -1,0 +1,17 @@
+#region {
+    min-width: 23rem;
+}
+
+#season {
+    min-width: 12rem;
+}
+
+th:first-child {
+    width: 25%;
+}
+
+@media (min-width: 480px) {
+    th:first-child {
+        width: 20%;
+    }
+}

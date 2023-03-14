@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import "./layout.css"
+import "./../styling/layout.css"
 
 type DataProps = {
     title: string,
@@ -28,9 +28,9 @@ const Layout = ({ title, children } : DataProps) => {
                 <div className = "links">
                     {title != "Home" && <Link to = "/">Home</Link>}
                     {title != "Calendar" && <Link to = "/calendar">Calendar</Link>}
-                    {title != "Wilderness" && <Link to = "/">Wilderness</Link>}
-                    {title != "The Company" && <Link to = "/">The Company</Link>}
-                    {title != "Link 4" && <Link to = "">Link 4</Link>}
+                    {title != "Wilderness" && <Link to = "/wilderness">Wilderness</Link>}
+                    {title != "The Company" && <Link to = "/company">The Company</Link>}
+                    {/* {title != "Link 4" && <Link to = "/">Link 4</Link>} */}
                 </div>
             </nav>
             <button id = "toTopButton" title = "GoToTop" type = "button" onClick = {() => window.scrollTo(0, 0)}>Back to top</button>
