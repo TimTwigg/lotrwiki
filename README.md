@@ -11,11 +11,11 @@ Middle Earth is history's most complex and meticulously created fantasy world. W
 This wiki explains some general lore, provides some utilities for understanding and interacting with Middle Earth,
 and chronicles the adventures of a certain as-yet-unnamed group of adventurers.
 <br/>
-View the <a href = "https://timtwigg.github.io/lotrwiki">LOTRWiki</a>.
+Visit the <a href = "https://timtwigg.github.io/lotrwiki" target = "_blank">LOTRWiki</a>.
 
 ## Gatsby <img alt = "Gatsby" src = "src/images/icon.png" width = "30"/>
 
-This website was built using <a href = "https://www.gatsbyjs.com/">Gatsby</a>, a React framework.
+This website was built using <a href = "https://www.gatsbyjs.com/" target = "_blank">Gatsby</a>, a React framework.
 
 ## A Note on Github Branches
 
