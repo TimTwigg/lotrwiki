@@ -2,7 +2,7 @@ import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import Layout from "../components/layout"
 
-const HomePage: React.FC<PageProps> = () => {
+const IndexPage: React.FC<PageProps> = () => {
     return (
         <Layout title = "Home">
             <div>
@@ -19,7 +19,7 @@ const HomePage: React.FC<PageProps> = () => {
     )
 }
 
-export default HomePage;
+export default IndexPage;
 
 export const Head: HeadFC = () => (
     <title>Home</title>
