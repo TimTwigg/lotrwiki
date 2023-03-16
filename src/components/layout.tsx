@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import "./../styling/layout.css"
+import { LinkBar } from "./linkBar";
+import "./../styling/layout.css";
 
 type DataProps = {
     title: string,
@@ -25,24 +25,23 @@ const Layout = ({ title, children } : DataProps) => {
             <nav>
                 <StaticImage className = "nav-img" src = "../images/oneRingIcon.png" alt = "LOTR one ring"/>
                 <h3>LOTR Campaign Wiki</h3>
-                <div className = "links">
-                    {title != "Home" && <Link to = "/">Home</Link>}
-                    {title != "Calendar" && <Link to = "/calendar">Calendar</Link>}
-                    {title != "Wilderness" && <Link to = "/wilderness">Wilderness</Link>}
-                    {title != "The Company" && <Link to = "/company">The Company</Link>}
-                    {/* {title != "Link 4" && <Link to = "/">Link 4</Link>} */}
-                </div>
+                <LinkBar hideWhenSmall = {true} pageTitle = {title} links = {[
+                    { name: "Home", url: "/" },
+                    { name: "Calendar", url: "/calendar" },
+                    { name: "Wilderness", url: "/wilderness" },
+                    { name: "The Company", url: "/company" }
+                ]}/>
             </nav>
             <button id = "toTopButton" title = "GoToTop" type = "button" onClick = {() => window.scrollTo(0, 0)}>Back to top</button>
             <main className = "container">
                 {children}
             </main>
-            <div className = "double spacer"></div>
+            <div className = "double spacer"/>
             <footer>
                 Disclaimer: Middle Earth Lore contained on this wiki is a mix of Tolkien's canon and my own invention. This site is meant for private use only
                 and is not intended to serve as an official reference.
             </footer>
-            <div className = "footer spacer"></div>
+            <div className = "footer spacer"/>
         </div>
     )
 }

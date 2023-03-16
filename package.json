@@ -9,7 +9,7 @@
         "gatsby"
     ],
     "scripts": {
-        "develop": "npm run clean && gatsby develop",
+        "develop": "gatsby develop",
         "predeploy": "npm run clean && npm run build",
         "deploy": "gh-pages -d public",
         "start": "gatsby develop",
@@ -19,6 +19,9 @@
         "typecheck": "tsc --noEmit"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.3.0",
+        "@fortawesome/free-solid-svg-icons": "^6.3.0",
+        "@fortawesome/react-fontawesome": "^0.2.0",
         "gatsby": "^5.7.0",
         "gatsby-plugin-anchor-links": "^1.2.1",
         "gatsby-plugin-image": "^3.7.0",

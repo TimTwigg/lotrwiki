@@ -1,7 +1,7 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
 import Layout from "../components/layout"
+import { AnchorLinkBar } from "../components/linkBar"
 
 var init:boolean = false;
 
@@ -343,12 +343,12 @@ const CalendarPage: React.FC<PageProps> = () => {
         <Layout title = "Calendar">
             <div>
                 <h1>Calendars and the Reckoning of Time</h1>
-                <div className = "contentLinks">
-                    <AnchorLink to = "/calendar#overview">Overview</AnchorLink>
-                    <AnchorLink to = "/calendar#calculator">Calculator</AnchorLink>
-                    <AnchorLink to = "/calendar#monthsTable">Months and Seasons</AnchorLink>
-                    <AnchorLink to = "/calendar#campaign">Campaign Time</AnchorLink>
-                </div>
+                <AnchorLinkBar hideWhenSmall = {true} pageTitle = "Calendar" links = {[
+                    { name: "Overview", url: "/calendar#overview" },
+                    { name: "Calculator", url: "/calendar#calculator" },
+                    { name: "Months and Seasons", url: "/calendar#monthsTable" },
+                    { name: "Campaign Time", url: "/calendar#campaign" }
+                ]}/>
                 <hr/>
 
                 <h3 id = "overview">Overview</h3>
@@ -389,7 +389,7 @@ const CalendarPage: React.FC<PageProps> = () => {
                         <option value = "add">Add days to a KR date</option>
                         <option value = "diff">Find the difference between two KR dates</option>
                     </select>
-                    <div className = "spacer"></div>
+                    <div className = "spacer"/>
                     <div id = "standardDateElement">
                         <label htmlFor = "standardDate" className = "offset-by-one column three columns">Standard Date</label>
                         <input id = "standardDate" title = "Standard Gregorian Date" type = "date" className = "four columns"/>
@@ -400,18 +400,18 @@ const CalendarPage: React.FC<PageProps> = () => {
                         <select id = "lotrMonth1" title = "King's Reckoning Month" className = "three columns" onChange = {() => insertLOTRDateOptions(1)}></select>
                         <select id = "lotrYear1" title = "King's Reckoning Year" className = "two columns" onChange = {() => insertLOTRDateOptions(1)}></select>
                     </div>
-                    <div className = "spacer"></div>
+                    <div className = "spacer"/>
                     <div id = "lotrDateAdditionElement" className = "hidden">
                         <label htmlFor = "dayInput" className = "offset-by-one column three columns">Days</label>
                         <input type = "number" id = "dayInput" className = "four columns"/>
-                        <div className = "spacer"></div>
+                        <div className = "spacer"/>
                     </div>
                     <div id = "lotrDateDifferenceElement" className = "hidden">
                         <label className = "offset-by-one column three columns">LOTR Date (FA)</label>
                         <select id = "lotrDay2" title = "King's Reckoning Day" className = "two columns"></select>
                         <select id = "lotrMonth2" title = "King's Reckoning Month" className = "three columns" onChange = {() => insertLOTRDateOptions(2)}></select>
                         <select id = "lotrYear2" title = "King's Reckoning Year" className = "two columns" onChange = {() => insertLOTRDateOptions(2)}></select>
-                        <div className = "spacer"></div>
+                        <div className = "spacer"/>
                     </div>
                     <p className = "output nine columns" id = "calculatorOut"></p>
                     <input type = "button" onClick = {() => calculateDate()} value = "Calculate"></input>
@@ -519,7 +519,7 @@ const CalendarPage: React.FC<PageProps> = () => {
                     As mentioned above, we will use the King's Reckoning for the LOTR D&D campaign. The campaign starts in early to mid Spring
                     (late Gwaeron), and from there depends on the players. Many companies prefer to spend winters somewhere warm...
                 </p>
-                <div className = "double spacer"></div>
+                <div className = "double spacer"/>
             </div>
         </Layout>
     )

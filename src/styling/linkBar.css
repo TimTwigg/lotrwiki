@@ -1,0 +1,99 @@
+.links {
+    display: block;
+    width: 100%;
+    background-color: #14312C;
+    padding: 10px 0;
+}
+
+.links a {
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    font-size: 1.8rem;
+}
+
+.bordered {
+    border-top: 1px solid #AB8D59;
+}
+
+.curvedBorder {
+    border-radius: 10px;
+}
+
+.anchorbar a {
+    width: fit-content;
+}
+
+/* Small Screen list of links display */
+@media (max-width: 550px) {
+    .hideWhenSmall a {
+        width: 100%;
+        margin: auto 0;
+        display: inline-block;
+        text-align: left;
+    }
+    
+    .hideWhenSmall a:not(:first-child) {
+        display: none;
+    }
+    
+    .hideWhenSmall.open a {
+        display: block;
+    }
+    
+    .icon {
+        display: block;
+        padding: 0 20px;
+        margin: auto 0;
+        float: right;
+        position: absolute;
+        right: 0;
+        top: 70px;
+    }
+    
+    .icon:hover {
+        color: #C7B9B9;
+        cursor: pointer;
+    }
+
+    .anchorbar.hideWhenSmall {
+        display: none;
+    }
+}
+
+/* Bigger screens responsiveness */
+
+@media (min-width: 550px) {
+    .links {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icon {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    .links {
+        float: right;
+        margin: 10px 20px 0 0;
+        width: 48%;
+    }
+
+    .anchorbar {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px 0;
+        float: none;
+    }
+
+    .links a {
+        padding-right: 2rem;
+    }
+
+    .bordered {
+        border: none;
+    }
+}

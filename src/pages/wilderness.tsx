@@ -1,8 +1,8 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import Layout from "../components/layout"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
 import "./../styling/wilderness.css"
+import { AnchorLinkBar } from "../components/linkBar"
 
 var init = false;
 
@@ -119,12 +119,11 @@ const WildernessPage: React.FC<PageProps> = () => {
                     The DMG specifies random tables for generating random wilderness survival conditions such as
                     weather, foraging, getting lost, etc. Here are those same tables automated to generate random conditions.
                 </p>
-                <div className = "contentLinks">
-                    <AnchorLink to = "/wilderness#generators">Generators</AnchorLink>
-                    <AnchorLink to = "/wilderness#weather">Weather</AnchorLink>
-                    <AnchorLink to = "/wilderness#foraging">Foraging</AnchorLink>
-                    {/* <AnchorLink to = "/wilderness#"></AnchorLink> */}
-                </div>
+                <AnchorLinkBar hideWhenSmall = {true} pageTitle = "Wilderness" links = {[
+                    { name: "Generators", url: "/wilderness#generators" },
+                    { name: "Weather", url: "/wilderness#weather" },
+                    { name: "Foraging", url: "/wilderness#foraging" }
+                ]}/>
                 <hr/>
 
                 <h3 id = "generators">Random Generators</h3>
@@ -139,8 +138,8 @@ const WildernessPage: React.FC<PageProps> = () => {
                         <option value = "Summer">Summer</option>
                         <option value = "Fall">Fall</option>
                     </select>
-                    <p id = "generatedWeather" className = "output"></p>
                 </div>
+                <p id = "generatedWeather" className = "output"></p>
                 <button id = "generate" className = "four columns" onClick = {setRandomWeather}>Generate Weather</button>
                 <hr/>
 
