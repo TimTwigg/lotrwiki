@@ -135,6 +135,8 @@ function changeOperation(operation: string) {
         document.getElementById("lotrDateDifferenceElement")!.classList.remove("hidden");
     }
 
+    if ((document.getElementById("lotrMonth1") as HTMLSelectElement).options.length < 1) init = false;
+
     if (!init) {
         insertLOTRDateOptions(1, true);
         insertLOTRDateOptions(2, true);
@@ -339,6 +341,8 @@ function calculateDate() {
 }
 
 const CalendarPage: React.FC<PageProps> = () => {
+    React.useEffect
+
     return (
         <Layout title = "Calendar">
             <div>
