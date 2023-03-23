@@ -1,7 +1,7 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import Layout from "../components/layout"
-import "./../styling/wilderness.css"
+import "./../styling/wilderness.scss"
 import { AnchorLinkBar } from "../components/linkBar"
 
 var init = false;
@@ -78,21 +78,26 @@ function setRandomWeather() {
     // temp
     let x = d20();
     if (x < 15) temp = "normal";
-    else if (x < 18) temp = "hot";
-    else temp = "cold";
+    else if (x < 18) temp = "cold";
+    else temp = "hot";
     // wind
     x = d20();
-    if (x < 15) wind = "no wind";
+    if (x < 13) wind = "no wind";
     else if (x < 18) wind = "light winds";
     else wind = "strong winds";
     // precipitation
     x = d20();
-    if (x < 15) precipitation = "clear skies";
+    if (x < 13) precipitation = "clear skies";
     else if (x < 18) precipitation = "light rain";
     else precipitation = "heavy rain";
 
+    var zone = REGIONS.find(r => r.name == region)?.terrain;
+    if (season == "Winter" && (zone == "mountains" || zone == "foothills" || zone == "tundra")) {
+        if (temp == "normal") temp = "cold";
+        else if (temp == "hot") temp = "normal";
+        precipitation = precipitation.replace("rain", "snow");
+    }
     if (temp != "normal") {
-        var zone = REGIONS.find(r => r.name == region)?.terrain;
         var mod = d4() * 10;
         if (temp == "hot" && (zone == "desert" || mod == 40 ||
         (mod == 30 && season == "Summer"))) {
@@ -102,6 +107,7 @@ function setRandomWeather() {
         (zone == "mountains" || zone == "foothills" ||
         zone == "tundra" || mod == 40 || (mod == 30 && season == "Winter"))) {
             temp = "extremely cold";
+            if (precipitation != "clear skies") precipitation = precipitation.replace("rain", "snow");
         }
     }
 
@@ -139,8 +145,8 @@ const WildernessPage: React.FC<PageProps> = () => {
                         <option value = "Fall">Fall</option>
                     </select>
                 </div>
-                <p id = "generatedWeather" className = "output"></p>
                 <button id = "generate" className = "four columns" onClick = {setRandomWeather}>Generate Weather</button>
+                <p id = "generatedWeather" className = "output eleven columns offset-by-one column"></p>
                 <hr/>
 
                 <h3 id = "weather">Weather</h3>
@@ -178,11 +184,11 @@ const WildernessPage: React.FC<PageProps> = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1-14</td>
+                            <td>1-12</td>
                             <td>None</td>
                         </tr>
                         <tr>
-                            <td>15-17</td>
+                            <td>13-17</td>
                             <td>Light</td>
                         </tr>
                         <tr>
@@ -200,11 +206,11 @@ const WildernessPage: React.FC<PageProps> = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1-14</td>
+                            <td>1-12</td>
                             <td>None</td>
                         </tr>
                         <tr>
-                            <td>15-17</td>
+                            <td>13-17</td>
                             <td>Light rain or light snowfall</td>
                         </tr>
                         <tr>

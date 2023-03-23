@@ -26,6 +26,19 @@
 */
 
 /* 
+*   Color Varaibles
+*   ================================================================
+*/
+
+$darkGreen: #14312C;
+$mediumGreen: #4B6B56;
+$cream: #C7B9B9;
+$gold: #AB8D59;
+$gray: #555555;
+$lightGray: #D1D1D1;
+$lightBlue: #33C3F0;
+
+/* 
 *   Grid
 *   ================================================================
 */
@@ -127,15 +140,17 @@
 
 html {
     font-size: 62.5%;
+    font-family: serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
     font-size: 1.75em;
     line-height: 1.6;
     font-weight: 400;
-    font-family: serif;
-    color: #C7B9B9;
-    background-color: #C7B9B9;
+    color: $cream;
+    background-color: $cream;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -179,7 +194,7 @@ h5 {
 }
 
 main {
-    background-color: #4B6B56;
+    background-color: $mediumGreen;
     border-radius: 0 0 10px 10px;
 }
 
@@ -207,24 +222,24 @@ footer {
 }
 
 /*
-* Nav bar
-* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Nav bar
+*   ================================================================
 */
 
 nav {
-    background-color: #14312C;
-    color: #AB8D59;
+    background-color: $darkGreen;
+    color: $gold;
     width: 100%;
     box-sizing: border-box;
     margin-left: 0;
     overflow: hidden;
-}
 
-nav h3 {
-    margin: 10px 0;
-    text-align: center;
-    width: 100%;
-    padding: 0;
+    h3 {
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
 }
 
 .nav-img {
@@ -264,20 +279,23 @@ nav h3 {
 }
 
 /*
-* Links
-* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Links
+*   ================================================================
 */
 
 a {
-    color: #AB8D59;
-}
-a:hover {
-    color: #C7B9B9;
+    color: $gold;
+    background-color: transparent;
+
+    &:hover {
+        color: $cream;
+        outline: 0;
+    }
 }
 
 /*
-* Buttons
-* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Buttons
+*   ================================================================
 */
 
 .button,
@@ -288,8 +306,8 @@ input[type = "button"] {
     display: inline-block;
     height: 38px;
     padding: 0 30px;
-    color: #AB8D59;
-    background-color: #14312C;
+    color: $gold;
+    background-color: $darkGreen;
     text-align: center;
     font-size: 11px;
     font-weight: 600;
@@ -299,15 +317,15 @@ input[type = "button"] {
     text-decoration: none;
     white-space: nowrap;
     border-radius: 4px;
-    border: 1px solid #AB8D59;
+    border: 1px solid $gold;
     cursor: pointer;
     box-sizing: border-box;
 }
 
 .button:hover,
 button:hover {
-    color: #C7B9B9;
-    background-color: #4B6B56;
+    color: $cream;
+    background-color: $mediumGreen;
     outline: 0;
 }
 
@@ -324,39 +342,42 @@ button {
 }
 
 /*
-* Forms
-* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Images
+*   ================================================================
 */
 
-input[type="email"],
+img {
+    border: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/*
+*   Forms
+*   ================================================================
+*/
+
 input[type="number"],
-input[type="search"],
 input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
 input[type="date"],
 textarea,
 select {
     height: 38px;
     padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-    background-color: #ffffff;
-    color: #555555;
+    background-color: white;
+    color: $gray;
     font: inherit;
-    border: 1px solid #D1D1D1;
+    border: 1px solid $lightGray;
     border-radius: 4px;
     box-shadow: none;
     box-sizing: border-box;
 }
 
 /* Removes awkward default styles on some inputs for iOS */
-input[type="email"],
 input[type="number"],
-input[type="search"],
 input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
 textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -369,18 +390,14 @@ textarea {
     padding-bottom: 6px;
 }
 
-input[type="email"]:focus,
 input[type="number"]:focus,
-input[type="search"]:focus,
 input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
 textarea:focus,
 select:focus {
-    border: 1px solid #33C3F0;
+    border: 1px solid $lightBlue;
     outline: 0;
 }
+
 label,
 legend {
     display: inline-block;
@@ -406,18 +423,19 @@ label > .label-body {
 
 input[type = "submit"],
 input[type = "button"] {
-    background-color: #ffffff;
+    background-color: white;
     display: block;
     float: right;
 }
 
 .output {
     min-height: 3rem;
+    overflow: hidden;
 }
 
 /*
-* Lists
-* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Lists
+*   ================================================================
 */
 
 ul {
@@ -446,20 +464,33 @@ li {
 }
 
 /*
-* Tables
-* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Tables
+*   ================================================================
 */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 th,
 td {
     padding: 2px 15px;
     text-align: left;
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid $lightGray;
+}
+
+table.equi {
+    table-layout: fixed;
+
+    thead tr th {
+        width: 10rem;
+    }
 }
 
 /*
-* Spacing
-* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Spacing
+*   ================================================================
 */
 
 button,
@@ -480,17 +511,41 @@ ol {
     margin-bottom: 2.5rem;
 }
 
+.lmargin {
+    margin-left: 40px;
+}
+
+.rmargin {
+    margin-right: 40px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rpad {
+    padding-right: 40px;
+}
+
+.lpad {
+    padding-left: 40px;
+}
+
 /*
-* Misc
-* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Misc
+*   ================================================================
 */
 
 hr {
     margin-top: 3rem;
     margin-bottom: 3.5rem;
     border-width: 0;
-    border-top: 1px solid #e1e1e1;
+    border-top: 1px solid $lightGray;
     width: 90%;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
 }
 
 .spacer {
@@ -520,8 +575,8 @@ hr {
 }
 
 /*
-* Utilities
-* ––––––––––––––––––––––––––––––––––––––––––––––––––
+*   Utilities
+*   ================================================================
 */
 
 .overflow {

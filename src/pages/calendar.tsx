@@ -2,14 +2,9 @@ import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import Layout from "../components/layout"
 import { AnchorLinkBar } from "../components/linkBar"
+import { LOTR_DAYS, LOTR_MONTHS, STANDARD_MONTHS, toDayCount, toLOTRDate, toStandardDate, calculateWeekday } from "../algorithms/dateAlgorithms";
 
 var init:boolean = false;
-
-const LOTR_MONTHS = ["Yestarë", "Narwain", "Nínui", "Gwaeron", "Gwirith", "Lothron", "Nórui", "Loëndë", "Cerveth", "Urui", "Ivanneth", "Narbeleth", "Hithui", "Girithron", "Mettarë"];
-const LOTR_DAYS = [1, 30, 30, 30, 30, 30, 31, 1, 31, 30, 30, 30, 30, 30, 1];
-
-const STANDARD_MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const STANDARD_DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 const CURRENT_YEAR_LOTR = 2;
 const CURRENT_YEAR_STANDARD = 2023;
@@ -24,91 +19,6 @@ function setInnerText(id:string, text:string) {
     if (el != null) el.innerText = text;
 }
 
-function sum(arr: number[]): number {
-    return arr.reduce((partial, a) => partial + a, 0);
-}
-
-function toDayCount(day:number, month:number, year:number, calendar: "lotr" | "standard", num:number): number {
-    var days;
-    if (calendar == "lotr") {
-        days = LOTR_DAYS.slice();
-    }
-    else {
-        days = STANDARD_DAYS.slice();
-    }
-
-    if (year % 4 == 0) {
-        if (calendar == "lotr") {
-            days[7] = 2;
-        }
-        else {
-            days[1] = 29;
-        }
-    }
-
-    return sum(days.slice(0, month)) + day + num;
-}
-
-function toLOTRDate(dayCount:number): {day:number, month:number, year:number} {
-    var yearMod = 0;
-    if (dayCount == 0) {
-        dayCount = sum(LOTR_DAYS) - 1;
-        yearMod = -1;
-    }
-    else if (dayCount < 0) {
-        while (dayCount < 0) {
-            yearMod -= 1;
-            dayCount += sum(LOTR_DAYS);
-        }
-    }
-    else if (dayCount > sum(LOTR_DAYS)) {
-        let total = sum(LOTR_DAYS);
-        while (dayCount > total) {
-            dayCount -= total;
-            yearMod += 1;
-        }
-    }
-
-    let month = 0;
-    let day = 0;
-    while (dayCount > 0) {
-        day = dayCount;
-        dayCount -= LOTR_DAYS[month];
-        month += 1;
-    }
-    return {day: day, month: month-1, year: yearMod};
-}
-
-function toStandardDate(dayCount:number): {day:number, month:number, year:number} {
-    var yearMod = 0;
-    if (dayCount == 0) {
-        dayCount = sum(STANDARD_DAYS) - 1;
-        yearMod = -1;
-    }
-    else if (dayCount < 0) {
-        while (dayCount < 0) {
-            yearMod -= 1;
-            dayCount += sum(STANDARD_DAYS);
-        }
-    }
-    else if (dayCount > sum(STANDARD_DAYS)) {
-        let total = sum(STANDARD_DAYS);
-        while (dayCount > total) {
-            dayCount -= total;
-            yearMod += 1;
-        }
-    }
-
-    let month = 0;
-    let day = 0;
-    while (dayCount > 0) {
-        day = dayCount;
-        dayCount -= STANDARD_DAYS[month];
-        month += 1;
-    }
-    return {day: day, month: month-1, year: yearMod};
-}
-
 function changeOperation(operation: string) {
     if (operation == "convert") {
         document.getElementById("lotrDateElement")!.classList.add("hidden");
@@ -116,7 +26,7 @@ function changeOperation(operation: string) {
         document.getElementById("lotrDateAdditionElement")!.classList.add("hidden");
         document.getElementById("lotrDateDifferenceElement")!.classList.add("hidden");
     }
-    else if (operation == "reverse") {
+    else if (operation == "reverse" || operation == "weekday") {
         document.getElementById("lotrDateElement")!.classList.remove("hidden");
         document.getElementById("standardDateElement")!.classList.add("hidden");
         document.getElementById("lotrDateAdditionElement")!.classList.add("hidden");
@@ -250,7 +160,8 @@ function calculateDate() {
         let year = date.getUTCFullYear();
         let daycount = toDayCount(day, month, year, "standard", 0);
         let dateObj = toLOTRDate(daycount);
-        outString = String(dateObj["day"]).padStart(2, "0") + " " + LOTR_MONTHS[dateObj["month"]] + " " +
+        outString = calculateWeekday(dateObj.day, dateObj.month, dateObj.year + CURRENT_YEAR_LOTR) + ", ";
+        outString += String(dateObj["day"]).padStart(2, "0") + " " + LOTR_MONTHS[dateObj["month"]] + " " +
             String(dateObj["year"] + CURRENT_YEAR_LOTR).padStart(2, "0") + " (Fourth Age)";
     }
 
@@ -274,6 +185,24 @@ function calculateDate() {
             String(dateObj["year"] + CURRENT_YEAR_STANDARD).padStart(2, "0");
     }
 
+    // get week day from lotr date
+    else if (operation == "weekday") {
+        let day = parseInt(getValueFromSelect("lotrDay1"));
+        let year = parseInt(getValueFromSelect("lotrYear1"));
+        let month = getValueFromSelect("lotrMonth1");
+        if (isNaN(day) || day == 0 || month == "Month" || isNaN(year)) {
+            setInnerText("calculatorOut", "No Date Selected");
+            return;
+        }
+
+        let monthNum = LOTR_MONTHS.indexOf(month);
+        if (year % 4 == 0 && month == "Enderi") {
+            monthNum = 7;
+        }
+        let weekday = calculateWeekday(day, monthNum, year);
+        outString = `${day} ${month} ${year} was a${weekday[0] == "M" || weekday[0] == "V" ? "" : "n"} ${weekday}.`;
+    }
+
     // add days to lotr date
     else if (operation == "add") {
         let day = parseInt(getValueFromSelect("lotrDay1"));
@@ -292,7 +221,8 @@ function calculateDate() {
         }
         let daycount = toDayCount(day, monthNum, year, "lotr", num);
         let dateObj = toLOTRDate(daycount);
-        outString = String(dateObj["day"]).padStart(2, "0") + " " + LOTR_MONTHS[dateObj["month"]] + " " +
+        outString = calculateWeekday(dateObj.day, dateObj.month, dateObj.year + year) + ", ";
+        outString += String(dateObj["day"]).padStart(2, "0") + " " + LOTR_MONTHS[dateObj["month"]] + " " +
             String(dateObj["year"] + year).padStart(2, "0");
     }
 
@@ -341,8 +271,6 @@ function calculateDate() {
 }
 
 const CalendarPage: React.FC<PageProps> = () => {
-    React.useEffect
-
     return (
         <Layout title = "Calendar">
             <div>
@@ -350,7 +278,7 @@ const CalendarPage: React.FC<PageProps> = () => {
                 <AnchorLinkBar hideWhenSmall = {true} pageTitle = "Calendar" links = {[
                     { name: "Overview", url: "/calendar#overview" },
                     { name: "Calculator", url: "/calendar#calculator" },
-                    { name: "Months and Seasons", url: "/calendar#monthsTable" },
+                    { name: "Months, Days, Seasons", url: "/calendar#monthsTable" },
                     { name: "Campaign Time", url: "/calendar#campaign" }
                 ]}/>
                 <hr/>
@@ -390,6 +318,7 @@ const CalendarPage: React.FC<PageProps> = () => {
                     <select id = "optionPicker" className = "eight columns" onChange = {(x) => changeOperation(x.target.value)}>
                         <option value = "convert">Convert from Standard Date</option>
                         <option value = "reverse">Convert to Standard Date</option>
+                        <option value = "weekday">Get Day of the Week for A KR Date</option>
                         <option value = "add">Add days to a KR date</option>
                         <option value = "diff">Find the difference between two KR dates</option>
                     </select>
@@ -422,7 +351,7 @@ const CalendarPage: React.FC<PageProps> = () => {
                 </form>
                 <hr/>
 
-                <h3 id = "monthsTable">Months and Seasons</h3>
+                <h3 id = "monthsTable">Months, Days, and Seasons</h3>
                 <table className = "one-half column">
                     <thead>
                         <tr>
@@ -513,8 +442,48 @@ const CalendarPage: React.FC<PageProps> = () => {
                     <p>
                         In the North-West of Middle Earth (Including Eriador, Rhovanion, Rohan, Gondor, and their surrounding areas), winter
                         is generally regarded as lasting from Girithron to Nínui, Spring from Gwaeron to Lothron, Summer from Nórui to Urui,
-                        and Fall from Ivanneth to Hithui.
+                        and Fall from Ivanneth to Hithui. <br/>
+                        <br/>
+                        The days of the week are Isilya, Aldëa, Menelya, Eärenya, Valanya, Elenya, and Anarya.
                     </p>
+                    <table className = "equi center rpad">
+                        <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Equivalent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Isilya</td>
+                                <td>Monday</td>
+                            </tr>
+                            <tr>
+                                <td>Aldëa</td>
+                                <td>Tuesday</td>
+                            </tr>
+                            <tr>
+                                <td>Menelya</td>
+                                <td>Wednesday</td>
+                            </tr>
+                            <tr>
+                                <td>Eärenya</td>
+                                <td>Thursday</td>
+                            </tr>
+                            <tr>
+                                <td>Valanya</td>
+                                <td>Friday</td>
+                            </tr>
+                            <tr>
+                                <td>Elenya</td>
+                                <td>Saturday</td>
+                            </tr>
+                            <tr>
+                                <td>Anarya</td>
+                                <td>Sunday</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <hr/>
 

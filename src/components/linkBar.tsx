@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import "./../styling/linkBar.css";
+import "./../styling/linkBar.scss";
 
 type LinkBarProps = {
     hideWhenSmall:boolean,

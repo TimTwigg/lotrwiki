@@ -10,7 +10,8 @@ const CompanyPage: React.FC<PageProps> = () => {
                 <hr/>
                 <p>
                     The Company is a group of intrepid adventurers. They have not yet named themselves, and as such remain "The Company". Currently, the Company's members are, alphabetically:
-                    Ingold, Luthais, Robinia, Saelrain, Théoryn Silvertongue, and Vezenbaer. <br/>
+                    Ingold, Luthais, Robinia, Saelrain, Théoryn Silvertongue, and Verlorener. <br/>
+                    Past members include Vezenbaer. <br/>
                     More information to come.
                 </p>
             </div>

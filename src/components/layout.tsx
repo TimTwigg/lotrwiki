@@ -1,7 +1,8 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { LinkBar } from "./linkBar";
-import "./../styling/layout.css";
+import "./../styling/main.scss";
+import "./../styling/normalize.scss";
 
 type DataProps = {
     title: string,
