@@ -4,17 +4,19 @@ import Layout from "../components/layout"
 import "./../styling/wilderness.scss"
 import { AnchorLinkBar } from "../components/linkBar"
 
-var init = false;
-
 type Region = {
     name: string,
-    terrain: "valley" | "mountains" | "foothills" | "forest" | "tundra" | "desert"
+    terrain: "valley" | "mountains" | "foothills" | "forest" | "tundra" | "desert" | "oceanside" | "lake" | "plains"
 }
 
 const REGIONS: Region[] = [
     {
-        name: "Rivendell",
-        terrain: "valley"
+        name: "Dorwinion",
+        terrain: "lake"
+    },
+    {
+        name: "Lonely Mountain",
+        terrain: "lake"
     },
     {
         name: "Mirkwood",
@@ -27,6 +29,14 @@ const REGIONS: Region[] = [
     {
         name: "Misty Mountain Foothills",
         terrain: "foothills"
+    },
+    {
+        name: "Rivendell",
+        terrain: "valley"
+    },
+    {
+        name: "Rohan",
+        terrain: "plains"
     },
     {
         name: "Vales of Anduin",
@@ -47,17 +57,6 @@ function d4() {
 
 function d20() {
     return Math.ceil(Math.random() * 20);
-}
-
-function setUpRegions() {
-    let selector = document.getElementById("region") as HTMLSelectElement;
-    for (let r of REGIONS) {
-        let child = document.createElement("option");
-        child.value = r.name;
-        child.text = r.name;
-        selector.appendChild(child);
-    }
-    init = true;
 }
 
 function getValueFromSelect(id:string): string {
@@ -87,25 +86,36 @@ function setRandomWeather() {
     else wind = "strong winds";
     // precipitation
     x = d20();
+    if (zone == "oceanside" || zone == "lake") x += 3; // precipitation is more likely nearby large bodies of water
+    else if (zone == "desert") x -= 3; // precipitation is less likely in dry zones
     if (x < 13) precipitation = "clear skies";
     else if (x < 18) precipitation = "light rain";
     else precipitation = "heavy rain";
 
     var zone = REGIONS.find(r => r.name == region)?.terrain;
+
+    // no hot in mountains in winter
     if (season == "Winter" && (zone == "mountains" || zone == "foothills" || zone == "tundra")) {
         if (temp == "normal") temp = "cold";
         else if (temp == "hot") temp = "normal";
         precipitation = precipitation.replace("rain", "snow");
     }
+
     if (temp != "normal") {
         var mod = d4() * 10;
+        // hot -> extremely hot conditions:
+        // - hot + (high mod or summer)
+        // - hot region + fairly high mod
         if (temp == "hot" && (zone == "desert" || mod == 40 ||
-        (mod == 30 && season == "Summer"))) {
+        (mod == 30 && season == "Summer")) && zone != "oceanside") {
             temp = "extremely hot";
         }
+        // cold -> extremely cold conditions:
+        // - cold + (high mod or winter)
+        // - cold + cold region
         else if (temp == "cold" && 
         (zone == "mountains" || zone == "foothills" ||
-        zone == "tundra" || mod == 40 || (mod == 30 && season == "Winter"))) {
+        zone == "tundra" || mod == 40 || (mod == 30 && season == "Winter")) && zone != "oceanside") {
             temp = "extremely cold";
             if (precipitation != "clear skies") precipitation = precipitation.replace("rain", "snow");
         }
@@ -135,14 +145,16 @@ const WildernessPage: React.FC<PageProps> = () => {
                 <h3 id = "generators">Random Generators</h3>
                 <h5>Weather</h5>
                 <div className = "six columns offset-by-one column">
-                    <select id = "region" defaultValue = {"Region"} onClick = {e => {if (!init) setUpRegions()}}>
+                    <select id = "region" defaultValue = {"Region"}>
                         <option value = "Region" disabled>Region</option>
+                        {
+                            REGIONS.map((v, i) => <option key = {i} value = {v.name}>{v.name}</option>)
+                        }
                     </select> in <select id = "season" defaultValue = {"Season"}>
                         <option value = "Season" disabled>Season</option>
-                        <option value = "Winter">Winter</option>
-                        <option value = "Spring">Spring</option>
-                        <option value = "Summer">Summer</option>
-                        <option value = "Fall">Fall</option>
+                        {
+                            SEASONS.map((v, i) => <option key = {i} value = {v}>{v}</option>)
+                        }
                     </select>
                 </div>
                 <button id = "generate" className = "four columns" onClick = {setRandomWeather}>Generate Weather</button>
