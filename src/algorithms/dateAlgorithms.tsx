@@ -97,12 +97,12 @@ function toStandardDate(dayCount: number): {day: number, month: number, year: nu
 
 // set from session 7
 // 10 Lothron 02 is an Eärenya/Thursday.
-// BASELINE is the first day of the Fourth Age.
+// BASELINE is the first day of the Fourth Age and the first day of 1977, the year the Silmarillion was published
 const BASELINE = {
-    day: 1,
-    month: "Yestarë",
-    year: 1,
     weekday: "Elenya",
+    year: 1,
+    age: "FA",
+    standardYear: 1977
 }
 
 const LOTR_WEEKDAYS = ["Isilya", "Aldëa", "Menelya", "Eärenya", "Valanya", "Elenya", "Anarya"]
@@ -110,15 +110,12 @@ const LOTR_WEEKDAYS = ["Isilya", "Aldëa", "Menelya", "Eärenya", "Valanya", "El
 // week day algorithms
 
 function calculateWeekday(day: number, month: number, year: number): string {
-    console.log(day, month, year);
     let daycount = toDayCount(day, month, year, "lotr", 0) - 1; // -1 to convert from 'day number' to 'days since'
-    console.log("daycount: ", daycount);
     for (let i = 1; i < year; ++i) {
         daycount += 365;
         if ((year - i) % 4 == 0) daycount += 1;
     }
     let index_adjustment = LOTR_WEEKDAYS.indexOf(BASELINE.weekday);
-    console.log(index_adjustment, daycount, daycount%7);
     return LOTR_WEEKDAYS[(daycount + index_adjustment) % 7];
 }
 
@@ -127,6 +124,7 @@ export {
     LOTR_MONTHS,
     STANDARD_DAYS,
     STANDARD_MONTHS,
+    BASELINE,
     sum,
     toDayCount,
     toLOTRDate,
