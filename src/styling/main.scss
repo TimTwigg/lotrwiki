@@ -37,6 +37,7 @@ $gold: #AB8D59;
 $gray: #555555;
 $lightGray: #D1D1D1;
 $lightBlue: #33C3F0;
+$red: rgb(155, 20, 20);
 
 /* 
 *   Grid
@@ -212,6 +213,10 @@ div {
 p {
     margin-top: 0;
     padding: 0 20px;
+
+    &.middle {
+        text-align: center;
+    }
 }
 
 footer {
@@ -370,6 +375,7 @@ svg:not(:root) {
 input[type="number"],
 input[type="text"],
 input[type="date"],
+input[type = "email"],
 textarea,
 select {
     height: 38px;
@@ -386,6 +392,7 @@ select {
 /* Removes awkward default styles on some inputs for iOS */
 input[type="number"],
 input[type="text"],
+input[type = "email"],
 textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -393,13 +400,14 @@ textarea {
 }
 
 textarea {
-    min-height: 65px;
+    min-height: 10rem;
     padding-top: 6px;
     padding-bottom: 6px;
 }
 
 input[type="number"]:focus,
 input[type="text"]:focus,
+input[type = "email"]:focus,
 textarea:focus,
 select:focus {
     border: 1px solid $lightBlue;
@@ -548,6 +556,10 @@ ol {
     margin-right: 40px;
 }
 
+.nolmargin {
+    margin-left: 0;
+}
+
 .center {
     margin-left: auto;
     margin-right: auto;
@@ -613,4 +625,8 @@ hr {
 
 .hidden {
     display: none;
+}
+
+.red {
+    color: $red;
 }

@@ -32,7 +32,8 @@ const Layout = ({ title, children } : DataProps) => {
                     { name: "Home", url: "/" },
                     { name: "Calendar", url: "/calendar" },
                     { name: "Weather", url: "/weather" },
-                    { name: "The Company", url: "/company" }
+                    { name: "The Company", url: "/company" },
+                    { name: "Contact Me", url: "/contact" }
                 ]}/>
             </nav>
             <button id = "toTopButton" className = "hidden" title = "GoToTop" type = "button" onClick = {() => window.scrollTo(0, 0)}>Back to top</button>
