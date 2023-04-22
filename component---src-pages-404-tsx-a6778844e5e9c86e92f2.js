@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunklotrwiki=self.webpackChunklotrwiki||[]).push([[218],{2513:function(e,t,l){l.r(t);var n=l(7294),a=l(4842);t.default=()=>n.createElement(a.Z,{title:"404"},n.createElement("h1",null,"Page Not Found"),n.createElement("hr",null),n.createElement("p",null,"Oops! Couldn't find that page..."))}}]);
-//# sourceMappingURL=component---src-pages-404-tsx-a6778844e5e9c86e92f2.js.map
