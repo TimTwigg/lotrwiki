@@ -227,6 +227,13 @@ footer {
     text-align: center;
 }
 
+@media (min-width: 550px) {
+    footer {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
 /*
 *   Nav bar
 *   ================================================================
@@ -554,6 +561,10 @@ ol {
 
 .rmargin {
     margin-right: 40px;
+}
+
+.tmargin {
+    margin-top: 25px;
 }
 
 .nolmargin {

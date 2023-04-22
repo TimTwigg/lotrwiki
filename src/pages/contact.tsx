@@ -16,7 +16,7 @@ const ContactPage: React.FC<PageProps> = () => {
     }
 
     return (
-        <Layout title = "Contact">
+        <Layout title = "Contact Me">
             <h1>Contact Me</h1>
             <p className = "middle">
                 Please fill out the below form to contact the developer about a bug on the site or a feature request.
