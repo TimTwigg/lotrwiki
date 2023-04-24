@@ -17,7 +17,7 @@ Visit the <a href = "https://timtwigg.github.io/lotrwiki" target = "_blank">LOTR
 
 # Notes
 
-## Gatsby <img alt = "Gatsby" src = "src/images/icon.png" width = "20"/>
+## Gatsby <img alt = "Gatsby" src = "src/assets/icon.png" width = "20"/>
 
 This website was built using <a href = "https://www.gatsbyjs.com/" target = "_blank">Gatsby</a>, a React framework.
 
