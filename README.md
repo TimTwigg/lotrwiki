@@ -1,5 +1,5 @@
 <p align = "center">
-    <img alt = "D&D" src = "src/images/dragon_ampersand.svg" width = "60"/>
+    <img alt = "D&D" src = "src/assets/dragon_ampersand.svg" width = "60"/>
 </p>
 <h1 align = "center">
     LOTR D&D Wiki
