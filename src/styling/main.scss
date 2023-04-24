@@ -38,6 +38,7 @@ $gray: #555555;
 $lightGray: #D1D1D1;
 $lightBlue: #33C3F0;
 $red: rgb(155, 20, 20);
+$lightGold: #C4AB7E;
 
 /* 
 *   Grid
@@ -230,7 +231,7 @@ footer {
 @media (min-width: 550px) {
     footer {
         width: 80%;
-        margin: 10px auto;
+        margin: auto 10% 10px 10%;
     }
 }
 
@@ -303,6 +304,14 @@ a {
     &:hover {
         color: $cream;
         outline: 0;
+    }
+}
+
+p a {
+    color: $lightGold;
+
+    &:hover {
+        color: $lightGray;
     }
 }
 
@@ -485,6 +494,10 @@ ol ul {
 
 li {
     margin-bottom: 1rem;
+
+    &::after {
+        display: none;
+    }
 }
 
 /*
@@ -535,6 +548,24 @@ table.fixMargin {
 @media (min-width: 480px) {
     .diceTable th:first-child {
         width: 20%;
+    }
+}
+
+/*
+*   Tabs
+*   ================================================================
+*/
+
+.react-tabs__tab {
+    &:first-child {
+        margin-left: 10px;
+    }
+
+    &--selected {
+        color: $gold !important;
+        background-color: $darkGreen !important;
+        border-color: $gold !important;
+        border-radius: 5px !important;
     }
 }
 

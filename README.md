@@ -8,8 +8,8 @@
 # Overview
 
 Middle Earth is history's most complex and meticulously created fantasy world. Where better to play some D&D?
-This wiki explains some general lore, provides some utilities for understanding and interacting with Middle Earth,
-and chronicles the adventures of a certain as-yet-unnamed group of adventurers.
+This wiki explains some homebrew table rules, provides some utilities for understanding Middle Earth, and chronicles the 
+adventures of The Company.
 
 Visit the <a href = "https://timtwigg.github.io/lotrwiki" target = "_blank">LOTRWiki</a>.
 
@@ -17,7 +17,7 @@ Visit the <a href = "https://timtwigg.github.io/lotrwiki" target = "_blank">LOTR
 
 # Notes
 
-## Gatsby <img alt = "Gatsby" src = "src/images/icon.png" width = "30"/>
+## Gatsby <img alt = "Gatsby" src = "src/images/icon.png" width = "20"/>
 
 This website was built using <a href = "https://www.gatsbyjs.com/" target = "_blank">Gatsby</a>, a React framework.
 

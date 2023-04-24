@@ -14,7 +14,7 @@ const config: GatsbyConfig = {
             resolve: "gatsby-plugin-manifest",
             options: {
                 start_url: ".",
-                icon: "src/images/oneRingIcon.png",
+                icon: "src/assets/oneRingIcon.png",
                 display: "standalone"
             }
         },

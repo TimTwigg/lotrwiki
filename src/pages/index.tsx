@@ -11,8 +11,8 @@ const IndexPage: React.FC<PageProps> = () => {
                 <p>
                     Middle Earth is history's most complex and meticulously created fantasy world. Where better to play some D&D?
                     <br/>
-                    This wiki explains some general lore, provides some utilities for understanding Middle Earth, and chronicles the 
-                    adventures of a certain as-yet-unnamed group of adventurers.
+                    This wiki explains some homebrew table rules, provides some utilities for understanding Middle Earth, and chronicles the 
+                    adventures of The Company.
                 </p>
             </div>
         </Layout>

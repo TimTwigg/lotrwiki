@@ -26,7 +26,7 @@ const Layout = ({ title, children } : DataProps) => {
     return (
         <div className = "pageDiv">
             <nav>
-                <StaticImage className = "nav-img" src = "../images/oneRingIcon.png" alt = "LOTR one ring"/>
+                <StaticImage className = "nav-img" src = "../assets/oneRingIcon.png" alt = "LOTR one ring"/>
                 <h3>LOTR Campaign Wiki</h3>
                 <LinkBar hideWhenSmall = {true} pageTitle = {title} links = {[
                     { name: "Home", url: "/" },
