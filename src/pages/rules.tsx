@@ -17,7 +17,8 @@ const RulesPage: React.FC<PageProps> = () => {
             <AnchorLinkBar hideWhenSmall = {true} pageTitle = "Rules" links = {[
                 { name: "Combat Rules", url: "/rules#combatrules" },
                 { name: "Skill Check Successes", url: "/rules#skillchecks" },
-                { name: "Exhaustion", url: "/rules#exhaustion" }
+                { name: "Exhaustion", url: "/rules#exhaustion" },
+                { name: "Dying", url: "/rules#dying" }
             ]}/>
             <p className = "tmargin">
                 Note: Some mechanics require more involved descriptions, and as such get their own pages.
@@ -123,7 +124,22 @@ const RulesPage: React.FC<PageProps> = () => {
                 players, we are implementing a modified form of the One D&D exhaustion rules. <br/> <br/>
 
                 Exhaustion is cumulative. There are 10 levels of exhaustion, and a character dies if they hit the 10th level. Whenever an exhausted character
-                makes a d20 roll, they subtract their exhaustion level from the result.
+                makes a d20 roll, they subtract their exhaustion level from the result. Additionally, an exhausted character's movement speed decreases by 5
+                feet for every two levels of exhaustion, beginning at the first. Their movement speed cannot be decreased to less than 5 feet by exhaustion.
+            </p>
+            <hr/>
+
+            <h3 id = "dying">Dying</h3>
+            <p>
+                Proposed New Mechanic: the Dying condition. <br/> <br/>
+
+                The Dying condition was created by Jacob on his Youtube channel, XP to Level 3. <br/>
+                When you drop to 0 hit points, you fall Prone and gain the Dying condition. At the start of each turn, you roll death saving throws as normal.
+                On your turn, you can use your action, bonus action, or move action. Once you use one of these, your turn ends. <br/> <br/>
+                If you use your action, you gain 3 levels of exhaustion. <br/>
+                If you use your bonus action, you gain 1 level of exhaustion. <br/>
+                While you have this condition, you cannot use any of your actions to stand up from Prone. <br/>
+                If you use your reaction while Dying, you gain 1 level of exhaustion.
             </p>
         </Layout>
     );
