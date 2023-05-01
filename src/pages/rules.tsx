@@ -131,15 +131,17 @@ const RulesPage: React.FC<PageProps> = () => {
 
             <h3 id = "dying">Dying</h3>
             <p>
-                Proposed New Mechanic: the Dying condition. <br/> <br/>
-
-                The Dying condition was created by Jacob on his Youtube channel, XP to Level 3. <br/>
+                The Dying condition was created by Jacob on his Youtube channel, XP to Level 3. <br/> <br/>
                 When you drop to 0 hit points, you fall Prone and gain the Dying condition. At the start of each turn, you roll death saving throws as normal.
-                On your turn, you can use your action, bonus action, or move action. Once you use one of these, your turn ends. <br/> <br/>
-                If you use your action, you gain 3 levels of exhaustion. <br/>
-                If you use your bonus action, you gain 1 level of exhaustion. <br/>
-                While you have this condition, you cannot use any of your actions to stand up from Prone. <br/>
-                If you use your reaction while Dying, you gain 1 level of exhaustion.
+                On your turn, you can use your action, bonus action, or move action. Once you use one of these, your turn ends.
+            </p>
+            <ul>
+                <li>If you use your action, you gain 3 levels of exhaustion.</li>
+                <li>If you use your bonus action, you gain 1 level of exhaustion.</li>
+                <li>If you use your reaction while Dying, you gain 1 level of exhaustion.</li>
+            </ul>
+            <p>
+                While you have this condition, you cannot use any of your actions to stand up from Prone.
             </p>
         </Layout>
     );
