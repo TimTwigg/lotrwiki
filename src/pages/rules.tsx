@@ -17,6 +17,7 @@ const RulesPage: React.FC<PageProps> = () => {
             <AnchorLinkBar hideWhenSmall = {true} pageTitle = "Rules" links = {[
                 { name: "Combat Rules", url: "/rules#combatrules" },
                 { name: "Skill Check Successes", url: "/rules#skillchecks" },
+                { name: "Encumbrance", url: "/rules#encumbrance" },
                 { name: "Exhaustion", url: "/rules#exhaustion" },
                 { name: "Dying", url: "/rules#dying" }
             ]}/>
@@ -113,6 +114,15 @@ const RulesPage: React.FC<PageProps> = () => {
                 a successful skill check into a Magical Result. A Magical Result indicates that the outcome of the task not only surpassed all expectations but
                 achieved something beyond your normal capabilities - in other words, a feat that could hardly be accomplished without magical aid. If you were
                 not using a Wondrous Artefact, then you may trigger the effect, but the DM decides the outcome.
+            </p>
+            <hr/>
+
+            <h3 id = "encumbrance">Encumbrance</h3>
+            <p>
+                If a player is carrying more than 8 times their Strength score, then their speed decreases by 10. <br/>
+                If a player is carrying more than 12 times their Strength score, then their speed is decreased by 20, and they have disadvantage on skill checks,
+                attack rolls, and saving throws made with Dexterity, Strength, and Constitution. <br/>
+                A player cannot carry more than 15 times their Strength score.
             </p>
             <hr/>
 
