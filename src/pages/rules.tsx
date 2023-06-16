@@ -32,7 +32,7 @@ const RulesPage: React.FC<PageProps> = () => {
                 These rules come mostly from the Dungeon Master's Workshop at the back of
                 the <a href = "https://www.dndbeyond.com/sources/dmg/dungeon-masters-workshop" target = "_blank">DMG</a>. Some of them have been
                 modified slightly to better fit our table. <br/><br/>
-                Listed here: Healing Surges, Climb onto a Bigger Creature, Disarm, Shove Aside, Overrun/Tumble, and Reduced to 0 HP. <br/>
+                Listed here: Healing Surges, Climb onto a Bigger Creature, Disarm, Shove Aside, Overrun/Tumble, Reduced to 0 HP, and Give Ground. <br/>
             </p>
             <h5>Healing Surges</h5>
             <p>
@@ -83,6 +83,33 @@ const RulesPage: React.FC<PageProps> = () => {
             <p>
                 Being reduced to 0 hit points is a harrowing experience. If a character is reduced to 0 hit points (in combat or out of it), they must make a
                 DC 15 Corruption saving throw against 1 shadow point. Additionally, they gain 1 level of exhaustion.
+            </p>
+            <h5>Give Ground</h5>
+            <p>
+                This rule was created by <a href = "https://www.brandesstoddard.com/2013/02/dd-next-design-idea-giving-ground/">Brandes Stoddard</a>. <br/>
+                As a reaction, whenever you take damage from a melee weapon attack, you may move five feet away from that attacker in order to reduce the damage of the
+                attack by a number of d6 equal to half your proficiency bonus (rounded down).
+                <ul>
+                    <li>
+                        The attacker has the immediate option to move five feet to follow, though if the attacker has caused more than one opponent to Give Ground in
+                        the same round of actions, he may follow only once.
+                    </li>
+                    <li>
+                        If none of the three squares behind the defender that increase his distance from the attacker are legal destinations, he may not Give Ground
+                        (even if he could otherwise pass through the square, such as when occupied by an ally).
+                    </li>
+                    <li>
+                        The defender also may not Give Ground to move into difficult terrain. Situationally, the DM may find it appropriate to allow a character to
+                        Give Ground with a move onto difficult terrain with a successful skill check (such as using Acrobatics to leap backward onto a table.)
+                    </li>
+                    <li>
+                        If for any reason the move backward fails, the defender does not reduce the incoming damage.
+                    </li>
+                    <li>
+                        A character may Give Ground in addition to being pushed, but not when knocked down, pulled, or teleported. The character must be able to move,
+                        and (obviously) must also be able to take reactions.
+                    </li>
+                </ul>
             </p>
             <hr/>
 
