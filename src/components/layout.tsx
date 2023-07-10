@@ -34,6 +34,7 @@ const Layout = ({ title, children } : DataProps) => {
                     { name: "Weather", url: "/weather" },
                     { name: "Rules", url: "/rules" },
                     { name: "The Company", url: "/company" },
+                    { name: "Maps", url: "/maps" },
                     { name: "Contact Me", url: "/contact" }
                 ]}/>
             </nav>

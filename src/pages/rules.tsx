@@ -170,7 +170,7 @@ const RulesPage: React.FC<PageProps> = () => {
             <p>
                 The Dying condition was created by Jacob on his Youtube channel, XP to Level 3. <br/> <br/>
                 When you drop to 0 hit points, you fall Prone and gain the Dying condition. At the start of each turn, you roll death saving throws as normal.
-                On your turn, you can use your action, bonus action, or move action. Once you use one of these, your turn ends.
+                If you start your turn Dying, you may use either your action, bonus action, or move action. Once you use one of these, your turn ends.
             </p>
             <ul>
                 <li>If you use your action, you gain 3 levels of exhaustion.</li>
