@@ -25,7 +25,7 @@ const CompanyPage: React.FC<PageProps> = () => {
                         <Tab>Reunion</Tab>
                     </TabList>
                     <TabPanel>
-                        <h5>Excerpt from <i>Chapter 7.12</i></h5>
+                        <h5>Excerpt from <i>Chapter 7.12.1</i></h5>
                         <p>
                             As mentioned briefly in the overview in Chapter 7.1, this group was remarkable in its seeming ability to defy all odds. Many details of the group's members are lost
                             to time, particularly as much of the lore included in the legends is unsubstantiated and most likely forms the narrative inventions of countless generations of
@@ -87,6 +87,7 @@ const CompanyPage: React.FC<PageProps> = () => {
                         </p>
                     </TabPanel>
                     <TabPanel>
+                        <h5>Excerpt from <i>Chapter 7.12.2</i></h5>
                         <p>
                             That a group of such diverse origins and intentions should split so drastically, and yet manage to reconvene only a few short months later is wholly remarkable. What they
                             did after the breaking and how they managed to all find themselves amongst the bandits in the Wolfswood is not entirely clear. Our analysis indicates that it was during this
