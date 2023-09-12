@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunklotrwiki=self.webpackChunklotrwiki||[]).push([[218],{2513:function(e,t,l){l.r(t),l.d(t,{Head:function(){return a}});var n=l(7294),u=l(4842);t.default=()=>n.createElement(u.Z,{title:"    "},n.createElement("h1",null,"Page Not Found"),n.createElement("hr",null),n.createElement("p",null,"Oops! Couldn't find that page..."));const a=()=>n.createElement("title",null,"PageNotFound")}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-19b86ac367aceb2b82dc.js.map
