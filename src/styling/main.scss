@@ -41,6 +41,22 @@ $red: rgb(155, 20, 20);
 $lightGold: #C4AB7E;
 
 /* 
+*   Fonts
+*   ================================================================
+*/
+
+@font-face {
+    font-family: "FreeMonoTengwar";
+    src: local("FreeMonoTengwar"),
+    local("FreeMonoTengwar-embedding"),
+    url("./../fonts/FreeMonoTengwar-embedding.ttf") format("TrueType");
+}
+
+.elvish {
+    font-family: FreeMonoTengwar;
+}
+
+/* 
 *   Grid
 *   ================================================================
 */
@@ -253,6 +269,15 @@ nav {
         text-align: center;
         width: 100%;
         padding: 0;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        display: none;
     }
 }
 
@@ -273,18 +298,30 @@ nav {
         width: 25%;
     }
 
-    nav h3 {
-        width: 75%;
-        margin: 20px 0 0 0;
-        display: inline-block;
+    nav {
+        h3 {
+            width: 75%;
+            margin: 10px 10px 10px 30px;
+            text-align: left;
+            display: inline-block;
+        }
+        
+        p {
+            width: fit-content;
+            display: inline;
+            float: right;
+            font-size: 4rem;
+            margin: 0 10px 5px 0;
+            text-align: right;
+        }
     }
 }
 
 @media (min-width: 1000px) {
-    nav h3 {
-        width: 35%;
-        margin: 10px 10px;
-        text-align: right;
+    nav {
+        h3 {
+            width: fit-content;
+        }
     }
 
     .nav-img {
@@ -567,6 +604,25 @@ table.fixMargin {
         border-color: $gold !important;
         border-radius: 5px !important;
     }
+}
+
+/*
+*   Profile Images and Text
+*   ================================================================
+*/
+
+.profile {
+    text-align: center;
+    overflow: hidden;
+
+    img {
+        border-radius: 25px;
+    }
+}
+
+span.profile {
+    padding: 0 20px;
+    margin-bottom: 2.5rem;
 }
 
 /*

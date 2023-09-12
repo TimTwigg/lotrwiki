@@ -8,7 +8,7 @@ import { AnchorLinkBar } from "../components/linkBar";
 
 const MapsPage: React.FC<PageProps> = () => {
     return (
-        <Layout title = "Maps">
+        <Layout title = "           ">
             <h1>Maps</h1>
             <AnchorLinkBar hideWhenSmall = {true} pageTitle = "Maps" links = {[
                 { name: "Middle Earth", url: "/maps#middleEarth" },

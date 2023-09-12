@@ -5,7 +5,7 @@ import { AnchorLinkBar } from "../components/linkBar";
 
 const RulesPage: React.FC<PageProps> = () => {
     return (
-        <Layout title = "Rules">
+        <Layout title = "          ">
             <h1>Rules</h1>
             <hr/>
             <p>
@@ -89,28 +89,28 @@ const RulesPage: React.FC<PageProps> = () => {
                 This rule was created by <a href = "https://www.brandesstoddard.com/2013/02/dd-next-design-idea-giving-ground/">Brandes Stoddard</a>. <br/>
                 As a reaction, whenever you take damage from a melee weapon attack, you may move five feet away from that attacker in order to reduce the damage of the
                 attack by a number of d6 equal to half your proficiency bonus (rounded down).
-                <ul>
-                    <li>
-                        The attacker has the immediate option to move five feet to follow, though if the attacker has caused more than one opponent to Give Ground in
-                        the same round of actions, he may follow only once.
-                    </li>
-                    <li>
-                        If none of the three squares behind the defender that increase his distance from the attacker are legal destinations, he may not Give Ground
-                        (even if he could otherwise pass through the square, such as when occupied by an ally).
-                    </li>
-                    <li>
-                        The defender also may not Give Ground to move into difficult terrain. Situationally, the DM may find it appropriate to allow a character to
-                        Give Ground with a move onto difficult terrain with a successful skill check (such as using Acrobatics to leap backward onto a table.)
-                    </li>
-                    <li>
-                        If for any reason the move backward fails, the defender does not reduce the incoming damage.
-                    </li>
-                    <li>
-                        A character may Give Ground in addition to being pushed, but not when knocked down, pulled, or teleported. The character must be able to move,
-                        and (obviously) must also be able to take reactions.
-                    </li>
-                </ul>
             </p>
+            <ul>
+                <li>
+                    The attacker has the immediate option to move five feet to follow, though if the attacker has caused more than one opponent to Give Ground in
+                    the same round of actions, he may follow only once.
+                </li>
+                <li>
+                    If none of the three squares behind the defender that increase his distance from the attacker are legal destinations, he may not Give Ground
+                    (even if he could otherwise pass through the square, such as when occupied by an ally).
+                </li>
+                <li>
+                    The defender also may not Give Ground to move into difficult terrain. Situationally, the DM may find it appropriate to allow a character to
+                    Give Ground with a move onto difficult terrain with a successful skill check (such as using Acrobatics to leap backward onto a table.)
+                </li>
+                <li>
+                    If for any reason the move backward fails, the defender does not reduce the incoming damage.
+                </li>
+                <li>
+                    A character may Give Ground in addition to being pushed, but not when knocked down, pulled, or teleported. The character must be able to move,
+                    and (obviously) must also be able to take reactions.
+                </li>
+            </ul>
             <hr/>
 
             <h3 id = "skillchecks">Skill Check Successes</h3>

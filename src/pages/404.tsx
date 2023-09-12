@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 
 const NotFoundPage: React.FC<PageProps> = () => {
     return (
-        <Layout title = "404">
+        <Layout title = "    ">
             <h1>Page Not Found</h1>
             <hr/>
             <p>

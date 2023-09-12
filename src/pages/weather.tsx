@@ -115,7 +115,7 @@ function setRandomWeather() {
 
 const WeatherPage: React.FC<PageProps> = () => {
     return (
-        <Layout title = "Weather">
+        <Layout title = "        ">
             <h1>Weather</h1>
             <hr/>
             <p>
@@ -163,7 +163,7 @@ const WeatherPage: React.FC<PageProps> = () => {
                 this post</a>. <br/>
                 <br/>
                 Hot and Cold brackets have a DC and damage time scale. Players in that bracket must make a daily Constitution saving
-                throw against the given DC or get 1 level of exhaustion. Every given time unit, they take 1d8 heat/cold damage.
+                throw against the given DC or get 1 level of exhaustion. Every given time unit, they take 1d4 heat/cold damage.
             </p>
             <table className = "eleven columns tableCenter">
                 <thead>

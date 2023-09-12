@@ -1,8 +1,8 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { LinkBar } from "./linkBar";
 import "./../styling/normalize.scss";
 import "./../styling/main.scss";
+import { Link } from "gatsby";
 
 type DataProps = {
     title: string,
@@ -27,16 +27,8 @@ const Layout = ({ title, children } : DataProps) => {
         <div className = "pageDiv">
             <nav>
                 <StaticImage className = "nav-img" src = "../assets/oneRingIcon.png" alt = "LOTR one ring"/>
-                <h3>LOTR Campaign Wiki</h3>
-                <LinkBar hideWhenSmall = {true} pageTitle = {title} links = {[
-                    { name: "Home", url: "/" },
-                    { name: "Calendar", url: "/calendar" },
-                    { name: "Weather", url: "/weather" },
-                    { name: "Rules", url: "/rules" },
-                    { name: "The Company", url: "/company" },
-                    { name: "Maps", url: "/maps" },
-                    { name: "Contact Me", url: "/contact" }
-                ]}/>
+                <Link to = "/"><h3>LOTR Campaign Wiki</h3></Link>
+                <p className = "elvish">{title}</p>
             </nav>
             <button id = "toTopButton" className = "hidden" title = "GoToTop" type = "button" onClick = {() => window.scrollTo(0, 0)}>Back to top</button>
             <main className = "container">
@@ -45,7 +37,7 @@ const Layout = ({ title, children } : DataProps) => {
             <div className = "double spacer"/>
             <footer>
                 Disclaimer: Middle Earth Lore contained on this wiki is a mix of Tolkien's canon and my own invention. This site is meant for private use only
-                and is not intended to serve as an official reference. This page last updated April 2023.
+                and is not intended to serve as an official reference. This page last updated September 2023.
             </footer>
             <div className = "footer spacer"/>
         </div>

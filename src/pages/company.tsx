@@ -3,33 +3,90 @@ import type { HeadFC, PageProps } from "gatsby"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Layout from "../components/layout"
 import 'react-tabs/style/react-tabs.css';
+import { StaticImage } from "gatsby-plugin-image";
 
 const CompanyPage: React.FC<PageProps> = () => {
     return (
-        <Layout title = "The Company">
+        <Layout title = "     ">
             <div>
-                <h1>Annals of the Company</h1>
+                <h1>Annals of Freedom's Company</h1>
                 <hr/>
                 <p>
-                    These annals document the journey of The Company through the Fourth Age of Middle Earth, as carefully established by historians of the Seventh Age.
+                    These annals document the journey of Freedom's Company through the Fourth Age of Middle Earth, as carefully established by historians of the Seventh Age.
                 </p>
                 <h5>Excerpt from <i>A Brief Analysis of the Early Fourth Age: Chapter 1</i> by Mori et al.</h5>
                 <p>
-                    We also analyze the storied accounts of the so-called heroes of the Fourth Age. Whether history or fantasy, exaggerated beyond belief or accounts of an entirely
+                    We also analyze the storied accounts of notable figures of the Fourth Age. Whether history or fantasy, exaggerated beyond belief or accounts of an entirely
                     different world in the past; these legends are told widely enough to be worth investigating, and, at a bare minimum, hold the makings of an epic tale.
                 </p>
 
                 <Tabs>
                     <TabList>
+                        <Tab>Freedom's Company</Tab>
                         <Tab>A Misgiving Start</Tab>
-                        <Tab>Reunion</Tab>
+                        <Tab>Reunion and Official Beginnings</Tab>
                     </TabList>
+                    <TabPanel>
+                        <h5>Members of Freedom's Company</h5>
+                        <p>
+                            These are the members of the group: Freedom's Company.
+                        </p>
+
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <b><u>Saelrain</u></b> <br/>
+                            Elf of Rivendell, Slayer of Evil, Renowned Smith
+                        </span>
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <b><u>Luthais</u></b> <br/>
+                            Avari Elf, Opponent of the Shadow
+                        </span>
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <b><u>Théoryn Silvertongue</u></b> <br/>
+                            Bard and Storyteller of Rohan, Viol Extraordinaire
+                        </span>
+                        <div className = "break"/>
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <b><u>Robinia Took</u></b> <br/>
+                            Wandering Hobbit of Bree, Healer and Herbalist, Prancing Pony Beer Advocate
+                        </span>
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <b><u>Ingold</u></b> <br/>
+                            Scholar and Healer from the Far North, Mysterious Wanderer, Wizard of Surprising Power
+                        </span>
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <b><u>Verlorener</u></b> <br/>
+                            Woodland Elf of Die Jäger der Dunkelheit, Sharpshooting Archer
+                        </span>
+                        <div className = "break"/>
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <b><u>Arden</u></b> <br/>
+                            Dwarf of Erebor, Weapons Expert
+                        </span>
+
+                        <div className = "break"/>
+                        <h5>Allies of Freedom's Company</h5>
+                        <p>
+                            Freedom's Company had several notable allies who fought with them for a time, but were not full members.
+                        </p>
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/vezenbaer.jpg" alt = ""/> <br/>
+                            <b><u>Vezenbaer</u></b> <br/>
+                            Daughter of Beormüd, Granddaughter of Beorn, Mighty Warrior
+                        </span>
+                    </TabPanel>
                     <TabPanel>
                         <h5>Excerpt from <i>Chapter 7.12.1</i></h5>
                         <p>
-                            As mentioned briefly in the overview in Chapter 7.1, this group was remarkable in its seeming ability to defy all odds. Many details of the group's members are lost
+                            As mentioned briefly in the overview in Chapter 7.1, Freedom's Company was remarkable in its seeming ability to defy all odds. Many details of the group's members are lost
                             to time, particularly as much of the lore included in the legends is unsubstantiated and most likely forms the narrative inventions of countless generations of
-                            storytellers. Some details, however, are recorded widely and accurately enough to be accepted as historical fact. Here follows a brief overview of the group's members,
+                            storytellers. Some details, however, are recorded widely and accurately enough to be accepted as historical fact. Here follows a brief analysis of the group's members,
                             deeds, and end.
                             <br/><br/>
                             Historians generally agree that the first members to join together were the elves, at the time known simply as Luthais and Saelrain. Luthais' past is almost entirely
@@ -111,6 +168,12 @@ const CompanyPage: React.FC<PageProps> = () => {
                             this victory made their names known through the northern vales of Anduin, although it seems strange to us that their return to Mountain Hall was met with distrust and
                             hostility (Tetuvi, 81). They thus returned after their great battle to Bärenburg, the city which had become their base in this region. As might be expected, a period of rest and
                             healing ensued before they continued their adventures.
+                            <br/><br/>
+                            The group traveled south, beginning their long journey to Rohan for the winter. A significant encounter early on in this journey was near the inn, Travler's Rest. The timelines
+                            suggest they made some other stop or detour before reaching this inn, the details again lost to time, but the date 22 Narbeleth stands out as one of the major moments for the group.
+                            They tracked down the troll known in the region as Mansbane, a huge beast toughened and strengthened in some dungeon. Though this victory is minor in the overall scheme of their
+                            history, the moment stands out as their official origin. It is upon their return to Travler's Rest that they are first recorded using the name <i>Freedom's Company</i> (Randall, 268).
+                            This moniker became their byname; and a beacon of hope for many in the times that followed.
                         </p>
                     </TabPanel>
                 </Tabs>

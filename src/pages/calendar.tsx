@@ -220,7 +220,7 @@ const CalendarPage: React.FC<PageProps> = () => {
     }
 
     return (
-        <Layout title = "Calendar">
+        <Layout title = "        ">
             <div>
                 <h1>Calendars and the Reckoning of Time</h1>
                 <hr/>

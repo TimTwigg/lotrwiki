@@ -6,9 +6,9 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./../styling/linkBar.scss";
 
 type LinkBarProps = {
-    hideWhenSmall:boolean,
+    hideWhenSmall: boolean,
     pageTitle: string,
-    links: {name:string, url:string}[]
+    links: { name: string, url: string }[]
 }
 
 function changeLinkBar(pageTitle: string) {

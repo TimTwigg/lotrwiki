@@ -7,7 +7,7 @@ const ContactPage: React.FC<PageProps> = () => {
     const [state, handleSubmit] = useForm("mqkoydbw");
     if (state.succeeded) {
         return (
-            <Layout title = "Contact">
+            <Layout title = "        ">
                 <h1>Contact Me</h1>
                 <p className = "middle">Message received!</p>
                 <hr/>
@@ -16,7 +16,7 @@ const ContactPage: React.FC<PageProps> = () => {
     }
 
     return (
-        <Layout title = "Contact Me">
+        <Layout title = "        ">
             <h1>Contact Me</h1>
             <p className = "middle">
                 Please fill out the below form to contact the developer about a bug on the site or a feature request.
