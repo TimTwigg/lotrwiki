@@ -11,6 +11,11 @@ type LinkBarProps = {
     links: { name: string, url: string }[]
 }
 
+type AnchorLinkBarProps = {
+    hideWhenSmall: boolean,
+    links: { name: string, url: string }[]
+}
+
 function changeLinkBar(pageTitle: string) {
     (document.getElementById(pageTitle + "-div") as HTMLDivElement).classList.toggle("open");
 }
@@ -26,11 +31,11 @@ const LinkBar = ({ hideWhenSmall, pageTitle, links } : LinkBarProps) => {
     );
 }
 
-const AnchorLinkBar = ({ hideWhenSmall, pageTitle, links } : LinkBarProps) => {
+const AnchorLinkBar = ({ hideWhenSmall, links } : AnchorLinkBarProps) => {
     return (
         <div className = {"anchorbar links curvedBorder" + (hideWhenSmall ? " hideWhenSmall" : "")}>
             {
-                links.filter((l, i) => l.name != pageTitle).map((l, i) => <AnchorLink key = {l.name} to = {l.url}>{l.name}</AnchorLink>)
+                links.map((l, i) => <AnchorLink key = {l.name} to = {l.url}>{l.name}</AnchorLink>)
             }
         </div>
     );

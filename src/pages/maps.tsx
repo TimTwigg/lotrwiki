@@ -3,14 +3,14 @@ import type { HeadFC, PageProps } from "gatsby";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import Zoom from "react-medium-image-zoom";
-import "react-medium-image-zoom/dist/styles.css";
 import { AnchorLinkBar } from "../components/linkBar";
+import "react-medium-image-zoom/dist/styles.css";
 
 const MapsPage: React.FC<PageProps> = () => {
     return (
         <Layout title = "           ">
             <h1>Maps</h1>
-            <AnchorLinkBar hideWhenSmall = {true} pageTitle = "Maps" links = {[
+            <AnchorLinkBar hideWhenSmall = {true} links = {[
                 { name: "Middle Earth", url: "/maps#middleEarth" },
                 { name: "Vales of Anduin", url: "/maps#valesOfAnduin" }
             ]}/>

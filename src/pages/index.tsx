@@ -20,12 +20,13 @@ const IndexPage: React.FC<PageProps> = () => {
             <hr/>
 
             <ImgNav>
-                <ImgNavLink img = {<StaticImage src = "./../assets/event.png" alt = "" title = "Calendar"/>} url = "/calendar"/>
-                <ImgNavLink img = {<StaticImage src = "./../assets/weather.png" alt = "" title = "Weather"/>} url = "/weather" />
-                <ImgNavLink img = {<StaticImage src = "./../assets/tablets.png" alt = "" title = "Rules"/>} url = "/rules"/>
-                <ImgNavLink img = {<StaticImage src = "./../assets/helmet.png" alt = "" title = "Company"/>} url = "/company"/>
-                <ImgNavLink img = {<StaticImage src = "./../assets/map.png" alt = "" title = "Maps"/>} url = "/maps"/>
-                <ImgNavLink img = {<StaticImage src = "./../assets/contact-mail.png" alt = "" title = "Contact"/>} url = "/contact"/>
+                <ImgNavLink img = {<StaticImage src = "./../assets/event.png" alt = ""/>} url = "/calendar" title = "Calendar"/>
+                <ImgNavLink img = {<StaticImage src = "./../assets/weather.png" alt = ""/>} url = "/weather" title = "Weather"/>
+                <ImgNavLink img = {<StaticImage src = "./../assets/tablets.png" alt = ""/>} url = "/rules" title = "Rules"/>
+                <ImgNavLink img = {<StaticImage src = "./../assets/helmet.png" alt = ""/>} url = "/company" title = "Company"/>
+                <ImgNavLink img = {<StaticImage src = "./../assets/map.png" alt = ""/>} url = "/maps" title = "Maps"/>
+                <ImgNavLink img = {<StaticImage src = "./../assets/bottle.png" alt = ""/>} url = "/apothecary" title = "Apothecary"/>
+                <ImgNavLink img = {<StaticImage src = "./../assets/contact-mail.png" alt = ""/>} url = "/contact" title = "Contact"/>
             </ImgNav>
 
             <hr/>

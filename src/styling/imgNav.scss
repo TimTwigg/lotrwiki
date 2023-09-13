@@ -1,19 +1,35 @@
 .imgnavlink {
     text-align: center;
     overflow: hidden;
-    border: solid 2px #49594f;
+    border: solid 2px #49594F;
     border-radius: 15px;
     border-style: outset;
     padding: 10px 20px 10px 20px;
     min-width: 125px;
     max-width: 200px;
     box-sizing: border-box;
-    background-color: #53775f;
+    background-color: #53775F;
+    position: relative;
+    transition: .5s ease;
 
-    p {
-        margin-bottom: 0;
-        padding-bottom: 0;
-        font-family: Comic;
+    .tooltip {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        background-color: #14312C;
+        color: #C7B9B9;
+        width: 100%;
+        transition: .5s ease;
+        opacity: 0;
+        text-align: center;
+    }
+
+    &:hover {
+        .tooltip {
+            opacity: 1;
+        }
+
+        background-color: #C7B9B9;
     }
 }
 

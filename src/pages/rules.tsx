@@ -14,7 +14,7 @@ const RulesPage: React.FC<PageProps> = () => {
                 using a few optional rules from the DMG, as well as a bunch of homebrew table rules and mechanics. These make combat more interesting,
                 and compensate for the otherwise-grity combo of no magical healing and rare long rests within the Adventures in Middle Earth system.
             </p>
-            <AnchorLinkBar hideWhenSmall = {true} pageTitle = "Rules" links = {[
+            <AnchorLinkBar hideWhenSmall = {true} links = {[
                 { name: "Combat Rules", url: "/rules#combatrules" },
                 { name: "Skill Check Successes", url: "/rules#skillchecks" },
                 { name: "Encumbrance", url: "/rules#encumbrance" },

@@ -1,8 +1,26 @@
 /*
-* This document adapted from:
-* Skeleton V2.0.4
-* www.getskeleton.com
+*  CONTENTS:
+*
+*  - Color Variables
+*  - Fonts
+*  - Grid
+*  - Base Styles
+*  - Nav Bar
+*  - Links
+*  - Buttons
+*  - Images
+*  - Forms
+*  - Lists
+*  - Tables
+*  - Tabs
+*  - Profile Images and Text
+*  - Spacing
+*  - Misc
+*  - Utilities
+*
 */
+
+/* ================================================================ */
 
 /* 
 *  MEDIA QUERY SIZE BRACKETS
@@ -59,6 +77,12 @@ $lightGold: #C4AB7E;
 /* 
 *   Grid
 *   ================================================================
+*/
+
+/*
+* Column formatting adapted from:
+* Skeleton V2.0.4
+* www.getskeleton.com
 */
 
 .container {
@@ -302,17 +326,18 @@ nav {
         h3 {
             width: 75%;
             margin: 10px 10px 10px 30px;
-            text-align: left;
+            text-align: center;
             display: inline-block;
         }
-        
+
         p {
-            width: fit-content;
-            display: inline;
-            float: right;
+            width: auto;
+            display: block;
             font-size: 4rem;
-            margin: 0 10px 5px 0;
-            text-align: right;
+            margin: 0 10px 0 10px;
+            padding: 0;
+            text-align: center;
+            overflow: hidden;
         }
     }
 }
@@ -320,12 +345,26 @@ nav {
 @media (min-width: 1000px) {
     nav {
         h3 {
-            width: fit-content;
+            width: 80%;
         }
     }
 
     .nav-img {
         width: 30%;
+    }
+}
+
+@media (min-width: 1250px) {
+    nav {
+        h3 {
+            width: auto;
+        }
+
+        p {
+            display: inline;
+            float: right;
+            text-align: right;
+        }
     }
 }
 
@@ -337,6 +376,7 @@ nav {
 a {
     color: $gold;
     background-color: transparent;
+    transition: .5s ease;
 
     &:hover {
         color: $cream;
@@ -585,6 +625,15 @@ table.fixMargin {
 @media (min-width: 480px) {
     .diceTable th:first-child {
         width: 20%;
+    }
+}
+
+table.infotable {
+    margin-left: 20px;
+
+    th,
+    td {
+        border-bottom-color: rgba($color: $lightGray, $alpha: 0.25);
     }
 }
 

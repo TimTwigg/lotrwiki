@@ -224,7 +224,7 @@ const CalendarPage: React.FC<PageProps> = () => {
             <div>
                 <h1>Calendars and the Reckoning of Time</h1>
                 <hr/>
-                <AnchorLinkBar hideWhenSmall = {true} pageTitle = "Calendar" links = {[
+                <AnchorLinkBar hideWhenSmall = {true} links = {[
                     { name: "Overview", url: "/calendar#overview" },
                     { name: "Calculator", url: "/calendar#calculator" },
                     { name: "Months, Days, Seasons", url: "/calendar#monthsTable" },

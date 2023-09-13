@@ -127,7 +127,7 @@ const WeatherPage: React.FC<PageProps> = () => {
                 this post</a>. The changes I made were mostly to allow for the greater impact of exhaustion in a game where long rests are
                 exceedingly rare.
             </p>
-            <AnchorLinkBar hideWhenSmall = {true} pageTitle = "Weather" links = {[
+            <AnchorLinkBar hideWhenSmall = {true} links = {[
                 { name: "Generator", url: "/weather#generator" },
                 { name: "Mechanics", url: "/weather#mechanics" },
                 { name: "Example", url: "/weather#example" },

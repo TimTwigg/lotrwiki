@@ -4,14 +4,16 @@ import "./../styling/imgNav.scss";
 
 type ImgNavLinkProps = {
     img: any,
-    url: string
+    url: string,
+    title: string
 }
 
-const ImgNavLink = ({ img, url } : ImgNavLinkProps) => {
+const ImgNavLink = ({ img, url, title } : ImgNavLinkProps) => {
     return (
         <div className = "imgnavlink">
             <Link to = {url}>
                 {img}
+                <span className = "tooltip">{title}</span>
             </Link>
         </div>
     );
