@@ -629,11 +629,12 @@ table.fixMargin {
 }
 
 table.infotable {
-    margin-left: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
 
     th,
     td {
-        border-bottom-color: rgba($color: $lightGray, $alpha: 0.25);
+        border-bottom-color: rgba($color: $lightGray, $alpha: 0.5);
     }
 }
 
