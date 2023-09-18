@@ -73,7 +73,7 @@ const CompanyPage: React.FC<PageProps> = () => {
                         <div className = "break"/>
                         <h5>Allies of Freedom's Company</h5>
                         <p>
-                            Freedom's Company had several notable allies who fought with them for a time, but were not full members.
+                            Freedom's Company had several notable allies who fought with them for a time, but were not long-term members.
                         </p>
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/vezenbaer.jpg" alt = ""/> <br/>

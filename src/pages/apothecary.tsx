@@ -31,7 +31,7 @@ const ApothecaryPage: React.FC<PageProps> = () => {
                 <tbody>
                     <tr>
                         <td>Ale of Strength</td>
-                        <td>Your Strength and Constitution scores increase by 2, to a max of 20. You are poisoned. This lasts for 1 hour or until the poison wears off, whichever comes first</td>
+                        <td>Your Strength and Constitution scores increase by 2, to a max of 20. You are drunk (poisoned). This lasts for 1 hour or until the alcohol wears off, whichever comes first</td>
                     </tr>
                     <tr>
                         <td>Athelas Salve</td>
@@ -131,9 +131,9 @@ const ApothecaryPage: React.FC<PageProps> = () => {
                         <td>Beornings</td>
                         <td>
                             Invigorates the body. Your movement speed increases by 10 feet and you can take an extra action each turn (only the Attack (one weapon attack only),
-                            Dash, Disengage, Dodge, Hide, or Use an Object actions can be used). This lasts for 1 minute, after which the potion wears off and you gain 1 level of
-                            exhaustion. If you take the Dodge action while under the effects of Kraftrank, enemies have disadvantage to you and you additionally gain a bonus 1 to
-                            your AC if your Dexterity modifier is at least +2
+                            Dash, Disengage, Dodge, Hide, or Use an Object actions can be used). This lasts for 30 seconds, after which the potion wears off, you gain 1 level of
+                            exhaustion, and you are stunned for 6 seconds. If you take the Dodge action while under the effects of Kraftrank, enemies have disadvantage to you and
+                            you additionally gain a bonus 1 to your AC if your Dexterity modifier is at least +2
                         </td>
                     </tr>
                     <tr>
@@ -141,13 +141,18 @@ const ApothecaryPage: React.FC<PageProps> = () => {
                         <td>The Toft</td>
                         <td>
                             A cocktail of stimulants that speeds up your body, at a cost. Your movement speed increases by 30 ft, and you can take an extra action, bonus action, and
-                            reaction per turn. Lasts 24 seconds. When the potion wears off, you gain 4 levels of exhaustion and take 3d6 damage
+                            reaction per turn. Lasts 18 seconds. When the potion wears off, you gain 4 levels of exhaustion, take 3d6 damage and are stunned for 6 seconds
                         </td>
                     </tr>
                     <tr>
                         <td>Orc Draught</td>
                         <td>Orcs</td>
-                        <td>It hurts. I think it helps a little too though, unless Merry was just a really good actor...</td>
+                        <td>It hurts. I think it helps too though, unless Merry was just a really good actor...</td>
+                    </tr>
+                    <tr>
+                        <td>Potion of Endurance</td>
+                        <td>Rohan</td>
+                        <td>You can travel at your full speed, you have advantage on Constitution saving throws, and you gain 10 temporary HP and 1 Hit Die every dawn. This lasts for 1 week</td>
                     </tr>
                     <tr>
                         <td>Queenblossom Salve</td>
