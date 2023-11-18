@@ -9,7 +9,7 @@
 
 Middle Earth is history's most complex and meticulously created fantasy world. Where better to play some D&D?
 This wiki explains some homebrew table rules, provides some utilities for understanding Middle Earth, and chronicles the 
-adventures of The Company.
+adventures of Freedom's Company.
 
 Visit the <a href = "https://timtwigg.github.io/lotrwiki" target = "_blank">LOTRWiki</a>.
 
