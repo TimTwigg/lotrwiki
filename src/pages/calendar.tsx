@@ -260,8 +260,9 @@ const CalendarPage: React.FC<PageProps> = () => {
                     to line up which we can use as a reference to convert. For example, consider converting 1 January 2023 to King's Reckoning. Clearly it is Yestarë,
                     but in which year? <br/>
                     I have chosen to align the years 1977 (Gregorian) and 1 (Fourth Age). The significance of these dates is thus: 1977 is the publication date of the
-                    Silmarillion (Tolkien's lore) while the Fourth Age is the proper start of my adapted lore. This means that years prior to 1977 are the Third Age,
-                    and our current year of 2023 is the year 47 in the Fourth Age.
+                    Silmarillion (Tolkien's lore) while the Fourth Age is the proper start of my adapted lore. This alignment is mostly for date conversion and leap year
+                    determination only since, according to Tolkien's canon, the events of the Hobbit and the Lord of the Rings do not take place in an alternate universe but
+                    in the distant past, and the current age which began in AD 1 is the seventh age of Middle Earth. 
                 </p>
                 <hr/>
 

@@ -149,7 +149,9 @@ const RulesPage: React.FC<PageProps> = () => {
                 If a player is carrying more than 8 times their Strength score, then their speed decreases by 10. <br/>
                 If a player is carrying more than 12 times their Strength score, then their speed is decreased by 20, and they have disadvantage on skill checks,
                 attack rolls, and saving throws made with Dexterity, Strength, and Constitution. <br/>
-                A player cannot carry more than 15 times their Strength score.
+                If a player is dragging or pushing more than 15 times their Strength score, their movements speed drops to 5 ft. <br/>
+                A player cannot move at all with more than 30 times their Strength score. <br/>
+                A player cannot carry more than 15 times their Strength score on a journey.
             </p>
             <hr/>
 

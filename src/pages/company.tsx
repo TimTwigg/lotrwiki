@@ -48,6 +48,7 @@ const CompanyPage: React.FC<PageProps> = () => {
                             Bard and Storyteller of Rohan, Viol Extraordinaire
                         </span>
                         <div className = "break"/>
+
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
                             <b><u>Robinia Took</u></b> <br/>
@@ -55,15 +56,9 @@ const CompanyPage: React.FC<PageProps> = () => {
                         </span>
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
-                            <b><u>Ingold</u></b> <br/>
-                            Scholar and Healer from the Far North, Mysterious Wanderer, Wizard of Surprising Power
-                        </span>
-                        <span className = "profile four columns">
-                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
                             <b><u>Verlorener</u></b> <br/>
                             Woodland Elf of Die Jäger der Dunkelheit, Sharpshooting Archer
                         </span>
-                        <div className = "break"/>
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
                             <b><u>Arden</u></b> <br/>
@@ -75,6 +70,11 @@ const CompanyPage: React.FC<PageProps> = () => {
                         <p>
                             Freedom's Company had several notable allies who fought with them for a time, but were not long-term members.
                         </p>
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <b><u>Ingold</u></b> <br/>
+                            Scholar and Healer from the Far North, Mysterious Wanderer, Wizard of Surprising Power
+                        </span>
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/vezenbaer.jpg" alt = ""/> <br/>
                             <b><u>Vezenbaer</u></b> <br/>
