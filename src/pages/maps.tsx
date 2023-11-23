@@ -46,6 +46,4 @@ const MapsPage: React.FC<PageProps> = () => {
 
 export default MapsPage;
 
-export const Head: HeadFC = () => (
-    <title>Maps</title>
-);
+export const Head: HeadFC = () => <title>LOTRWiki | Maps</title>;

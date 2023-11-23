@@ -33,29 +33,29 @@ const CompanyPage: React.FC<PageProps> = () => {
                         </p>
 
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/saelrain.png" alt = ""/> <br/>
                             <b><u>Saelrain</u></b> <br/>
-                            Elf of Rivendell, Slayer of Evil, Renowned Smith
+                            Elf of Rivendell, aka Elfindell, Smith and Warrior
                         </span>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/luthais.png" alt = ""/> <br/>
                             <b><u>Luthais</u></b> <br/>
-                            Avari Elf, Opponent of the Shadow
+                            Avari Elf, aka Crusader, Opponent of the Shadow
                         </span>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/theorynWithHorse.png" alt = ""/> <br/>
                             <b><u>Théoryn Silvertongue</u></b> <br/>
-                            Bard and Storyteller of Rohan, Viol Extraordinaire
+                            Human of Rohan, Viol Extraordinaire, Bard and Storyteller
                         </span>
                         <div className = "break"/>
 
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
                             <b><u>Robinia Took</u></b> <br/>
-                            Wandering Hobbit of Bree, Healer and Herbalist, Prancing Pony Beer Advocate
+                            Hobbit of Bree, Healer and Herbalist, Prancing Pony Beer Advocate
                         </span>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/verlorener.png" alt = ""/> <br/>
                             <b><u>Verlorener</u></b> <br/>
                             Woodland Elf of Die Jäger der Dunkelheit, Sharpshooting Archer
                         </span>
@@ -71,15 +71,21 @@ const CompanyPage: React.FC<PageProps> = () => {
                             Freedom's Company had several notable allies who fought with them for a time, but were not long-term members.
                         </p>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/ingold.png" alt = ""/> <br/>
                             <b><u>Ingold</u></b> <br/>
-                            Scholar and Healer from the Far North, Mysterious Wanderer, Wizard of Surprising Power
+                            Human from the Far North, Healer and Scholar, Mysterious Wanderer, Wizard
                         </span>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/vezenbaer.jpg" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/vezenbaer2.jpg" alt = ""/> <br/>
                             <b><u>Vezenbaer</u></b> <br/>
                             Daughter of Beormüd, Granddaughter of Beorn, Mighty Warrior
                         </span>
+
+                        <hr/>
+                        <h5>Image Disclaimer</h5>
+                        <p>
+                            None of the images on this page are mine. The artworks here of Luthais, Theoryn, Verlorener, and Ingold are AI generated.
+                        </p>
                     </TabPanel>
                     <TabPanel>
                         <h5>Excerpt from <i>Chapter 7.12.1</i></h5>
@@ -167,13 +173,23 @@ const CompanyPage: React.FC<PageProps> = () => {
                             unlikely that bandits would have lost in that fight, and as such we speculate that either the numbers are exaggerated or that the Company had some unknown aid. Regardless,
                             this victory made their names known through the northern vales of Anduin, although it seems strange to us that their return to Mountain Hall was met with distrust and
                             hostility (Tetuvi, 81). They thus returned after their great battle to Bärenburg, the city which had become their base in this region. As might be expected, a period of rest and
-                            healing ensued before they continued their adventures.
+                            healing ensued before they continued their adventures. The mysterious Ingold again left the company in what had by then become his pattern of disappearance and reappearance.
                             <br/><br/>
                             The group traveled south, beginning their long journey to Rohan for the winter. A significant encounter early on in this journey was near the inn, Travler's Rest. The timelines
                             suggest they made some other stop or detour before reaching this inn, the details again lost to time, but the date 22 Narbeleth stands out as one of the major moments for the group.
                             They tracked down the troll known in the region as Mansbane, a huge beast toughened and strengthened in some dungeon. Though this victory is minor in the overall scheme of their
                             history, the moment stands out as their official origin. It is upon their return to Travler's Rest that they are first recorded using the name <i>Freedom's Company</i> (Randall, 268).
                             This moniker became their byname; and a beacon of hope for many in the times that followed.
+                            <br/><br/>
+                            After their time in Travler's Rest, the newly named Freedom's Company traveled to the Toft. Their time here is well documented, thanks to the competition which took place at that time.
+                            It was at this time that Saelrain rejoined the company, bringing with him a new weapon in the form of a large expertly-crafted maul, which he later used to devastating effect. However,
+                            as one member returned, another left, as Arden departed the company. It is unknown why he left, though some scattered writings of dubious origin attribute his departure to some message
+                            received in prophecy form from the local Seeress, Sylvia Moonshadow, whose story is analyzed in Chapter 9.6. The group then took part in the competition which was taking place that week.
+                            In the Fall of 02 FA, Lord Vidugalum of the Toft sponsored a competition with a large prize as part of his campaign to encourage the town's growth and prosperity. Arriving just in time,
+                            Freedom's Company managed to enter themselves into it, and proceeded to win that competition, earning considerable local fame as other stories of their doings in the valley were slowly
+                            connected to the name Freedom's Company. Saelrain and Luthais in particular earned the local monikers of Elfindell and Crusader. At some point during their stay in the Toft, Freedom's
+                            Company were also rejoined by Ingold, his absence this time known with a fair amount of reliability: records suggest that he was the healer who prevented the plague outbreak in the village
+                            of Oakville. Freedom's Company then left the Toft, entering the wilderness section of their long journey south.
                         </p>
                     </TabPanel>
                 </Tabs>
@@ -184,6 +200,4 @@ const CompanyPage: React.FC<PageProps> = () => {
 
 export default CompanyPage;
 
-export const Head: HeadFC = () => (
-    <title>The Company</title>
-);
+export const Head: HeadFC = () => <title>LOTRWiki | Company</title>;

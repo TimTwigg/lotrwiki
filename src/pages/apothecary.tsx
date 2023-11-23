@@ -167,6 +167,4 @@ const ApothecaryPage: React.FC<PageProps> = () => {
 
 export default ApothecaryPage;
 
-export const Head: HeadFC = () => (
-    <title>Apothecary</title>
-);
+export const Head: HeadFC = () => <title>LOTRWiki | Apothecary</title>;

@@ -45,4 +45,4 @@ const ContactPage: React.FC<PageProps> = () => {
 
 export default ContactPage;
 
-export const Head: HeadFC = () => <title>Contact</title>;
+export const Head: HeadFC = () => <title>LOTRWiki | Contact</title>;

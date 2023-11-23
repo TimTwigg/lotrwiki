@@ -188,4 +188,4 @@ const RulesPage: React.FC<PageProps> = () => {
 
 export default RulesPage;
 
-export const Head: HeadFC = () => <title>Rules</title>;
+export const Head: HeadFC = () => <title>LOTRWiki | Rules</title>;

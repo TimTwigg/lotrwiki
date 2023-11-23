@@ -482,4 +482,4 @@ const WeatherPage: React.FC<PageProps> = () => {
 
 export default WeatherPage;
 
-export const Head: HeadFC = () => <title>Weather</title>;
+export const Head: HeadFC = () => <title>LOTRWiki | Weather</title>;

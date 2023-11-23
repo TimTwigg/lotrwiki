@@ -477,4 +477,4 @@ const CalendarPage: React.FC<PageProps> = () => {
 
 export default CalendarPage;
 
-export const Head: HeadFC = () => <title>Calendar</title>;
+export const Head: HeadFC = () => <title>LOTRWiki | Calendar</title>;

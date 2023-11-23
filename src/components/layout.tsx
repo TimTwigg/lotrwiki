@@ -36,8 +36,8 @@ const Layout = ({ title, children } : DataProps) => {
             </main>
             <div className = "double spacer"/>
             <footer>
-                Disclaimer: Middle Earth Lore contained on this wiki is a mix of Tolkien's canon and my own invention. This site is meant for private use only
-                and is not intended to serve as an official reference. This page last updated November 2023.
+                Disclaimer: Middle Earth Lore contained on this wiki is a mix of Tolkien's canon and my own invention. This site is meant for private (non-commercial)
+                use only and is not intended to serve as an official reference. This page last updated November 2023.
             </footer>
             <div className = "footer spacer"/>
         </div>
