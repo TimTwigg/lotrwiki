@@ -38,7 +38,7 @@ const CompanyPage: React.FC<PageProps> = () => {
                             Elf of Rivendell, aka Elfindell, Smith and Warrior
                         </span>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/luthais.png" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/luthais.jpg" alt = ""/> <br/>
                             <b><u>Luthais</u></b> <br/>
                             Avari Elf, aka Crusader, Opponent of the Shadow
                         </span>
@@ -50,7 +50,7 @@ const CompanyPage: React.FC<PageProps> = () => {
                         <div className = "break"/>
 
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/robinia.jpg" alt = ""/> <br/>
                             <b><u>Robinia Took</u></b> <br/>
                             Hobbit of Bree, Healer and Herbalist, Prancing Pony Beer Advocate
                         </span>
@@ -60,7 +60,7 @@ const CompanyPage: React.FC<PageProps> = () => {
                             Woodland Elf of Die Jäger der Dunkelheit, Sharpshooting Archer
                         </span>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/arden.jpg" alt = ""/> <br/>
                             <b><u>Arden</u></b> <br/>
                             Dwarf of Erebor, Weapons Expert
                         </span>
@@ -71,12 +71,12 @@ const CompanyPage: React.FC<PageProps> = () => {
                             Freedom's Company had several notable allies who fought with them for a time, but were not long-term members.
                         </p>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/ingold.png" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/ingold.jpg" alt = ""/> <br/>
                             <b><u>Ingold</u></b> <br/>
                             Human from the Far North, Healer and Scholar, Mysterious Wanderer, Wizard
                         </span>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/vezenbaer2.jpg" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/vezenbaer.jpg" alt = ""/> <br/>
                             <b><u>Vezenbaer</u></b> <br/>
                             Daughter of Beormüd, Granddaughter of Beorn, Mighty Warrior
                         </span>
@@ -84,7 +84,7 @@ const CompanyPage: React.FC<PageProps> = () => {
                         <hr/>
                         <h5>Image Disclaimer</h5>
                         <p>
-                            None of the images on this page are mine. The artworks here of Luthais, Theoryn, Verlorener, and Ingold are AI generated.
+                            None of the images on this page are mine. The artworks here of Luthais, Theoryn, Robinia, Verlorener, Arden, and Ingold are AI generated.
                         </p>
                     </TabPanel>
                     <TabPanel>
