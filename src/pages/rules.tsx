@@ -16,6 +16,7 @@ const RulesPage: React.FC<PageProps> = () => {
             </p>
             <AnchorLinkBar hideWhenSmall = {true} links = {[
                 { name: "Combat Rules", url: "/rules#combatrules" },
+                { name: "Critical Hits", url: "/rules#criticalhits" },
                 { name: "Skill Check Successes", url: "/rules#skillchecks" },
                 { name: "Encumbrance", url: "/rules#encumbrance" },
                 { name: "Exhaustion", url: "/rules#exhaustion" },
@@ -32,7 +33,7 @@ const RulesPage: React.FC<PageProps> = () => {
                 These rules come mostly from the Dungeon Master's Workshop at the back of
                 the <a href = "https://www.dndbeyond.com/sources/dmg/dungeon-masters-workshop" target = "_blank">DMG</a>. Some of them have been
                 modified slightly to better fit our table. <br/><br/>
-                Listed here: Healing Surges, Climb onto a Bigger Creature, Disarm, Shove Aside, Overrun/Tumble, Reduced to 0 HP, and Give Ground. <br/>
+                Listed here: Healing Surges, Flanking, Climb onto a Bigger Creature, Disarm, Shove Aside, Overrun/Tumble, Reduced to 0 HP, and Give Ground. <br/>
             </p>
             <h5>Healing Surges</h5>
             <p>
@@ -41,6 +42,11 @@ const RulesPage: React.FC<PageProps> = () => {
                 short or long rest. <br/><br/>
                 Under this optional rule, a character regains all spent Hit Dice at the end of a long rest. With a short rest, a character regains Hit
                 Dice equal to his or her level divided by four (minimum of one die).
+            </p>
+            <h5>Flanking</h5>
+            <p>
+                If you attack an enemy, and an ally is within 5 feet of that enemy directly opposite you, you gain a +2 modifier to hit as the enemy struggles
+                to keep track of both of you. The enemy must rely on sight for this to take effect.
             </p>
             <h5>Climb onto a Bigger Creature</h5>
             <p>
@@ -109,6 +115,37 @@ const RulesPage: React.FC<PageProps> = () => {
                 <li>
                     A character may Give Ground in addition to being pushed, but not when knocked down, pulled, or teleported. The character must be able to move,
                     and (obviously) must also be able to take reactions.
+                </li>
+            </ul>
+            <hr/>
+
+            <h3 id = "criticalhits">Critical Hits</h3>
+            <p>
+                When a character scores a critical hit in combat, choose on of the following effects: <br/>
+            </p>
+            <ul>
+                <li>
+                    <b>Brutality:</b> Take the max damage of the weapon or spell attack, and roll the damage dice again.
+                </li>
+                <li>
+                    <b>Hamstring</b> Your attack impedes the target's movement and opens a gaping wound. During the target's next turn, it takes 1d6 slashing damage for every 5ft it
+                    chooses to move. Involuntary movement does not trigger this damage.
+                </li>
+                <li>
+                    <b>Identify Weakness</b> You spot a gap in the target's defenses and call it out to allies. All allies within 10ft of the target are granted advantage on their next attack. If
+                    an ally makes multiple attacks on their turn, only the first is made at advantage.
+                </li> 
+                <li>
+                    <b>Knockdown</b> Your attack caught the target off balance. They are knocked prone.
+                </li>
+                <li>
+                    <b>Menacing Strike</b> The confidence of your attack demoralizes the target. On its next turn, it spends all of its movement attempting to run from you.
+                </li>
+                <li>
+                    <b>Stumble</b> The force of your critical attack stumbles the target. Its next roll (i.e., attack, ability check, or saving throw) is made at disadvantage.
+                </li>
+                <li>
+                    <b>Swift Strike</b> The quickness of your attack has granted you an additional action this turn.
                 </li>
             </ul>
             <hr/>

@@ -35,17 +35,17 @@ const CompanyPage: React.FC<PageProps> = () => {
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/saelrain.png" alt = ""/> <br/>
                             <b><u>Saelrain</u></b> <br/>
-                            Elf of Rivendell, aka Elfindell, Smith and Warrior
+                            Elf of Rivendell, aka Elfindell, Chil-Damuth, Smith and Warrior
                         </span>
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/luthais.jpg" alt = ""/> <br/>
                             <b><u>Luthais</u></b> <br/>
-                            Avari Elf, aka Crusader, Opponent of the Shadow
+                            Avari Elf, aka Crusader, Blackthorn of the East, Opponent of the Shadow
                         </span>
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/theorynWithHorse.png" alt = ""/> <br/>
                             <b><u>Théoryn Silvertongue</u></b> <br/>
-                            Human of Rohan, Viol Extraordinaire, Bard and Storyteller
+                            Human of Rohan, Daughter of Twisted Fate, Viol Extraordinaire, Bard and Storyteller
                         </span>
                         <div className = "break"/>
 
@@ -57,12 +57,12 @@ const CompanyPage: React.FC<PageProps> = () => {
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/verlorener.png" alt = ""/> <br/>
                             <b><u>Verlorener</u></b> <br/>
-                            Woodland Elf of Die Jäger der Dunkelheit, Sharpshooting Archer
+                            Woodland Elf of Die Jäger der Dunkelheit, Lost Daughter of Forgotten Fate, Sharpshooting Archer
                         </span>
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/arden.jpg" alt = ""/> <br/>
                             <b><u>Arden</u></b> <br/>
-                            Dwarf of Erebor, Weapons Expert
+                            Dwarf of Erebor, Stoneheart, Weapons Expert
                         </span>
 
                         <div className = "break"/>
@@ -73,12 +73,12 @@ const CompanyPage: React.FC<PageProps> = () => {
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/ingold.jpg" alt = ""/> <br/>
                             <b><u>Ingold</u></b> <br/>
-                            Human from the Far North, Healer and Scholar, Mysterious Wanderer, Wizard
+                            Human from the Far North, Healer and Scholar, Servant of the Sky and Water, Mysterious Wanderer, Wizard
                         </span>
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/vezenbaer.jpg" alt = ""/> <br/>
                             <b><u>Vezenbaer</u></b> <br/>
-                            Daughter of Beormüd, Granddaughter of Beorn, Mighty Warrior
+                            Beorning of Bärenburg, Daughter of Beormüd, Granddaughter of Beorn, Bearkin, Mighty Warrior
                         </span>
 
                         <hr/>

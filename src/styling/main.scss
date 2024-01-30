@@ -258,6 +258,10 @@ p {
     &.middle {
         text-align: center;
     }
+
+    &.indent {
+        padding-left: 40px;
+    }
 }
 
 footer {
@@ -557,8 +561,9 @@ ol {
 }
 
 ol, ul {
-    padding-left: 30px;
+    padding-left: 40px;
     margin-top: 0;
+    list-style-position: outside;
 }
 
 ul ul,
