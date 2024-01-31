@@ -2,118 +2,16 @@ import * as React from "react";
 import { HeadFC, PageProps } from "gatsby";
 import Layout from "../components/layout";
 import { AnchorLinkBar } from "../components/linkBar";
-import { d4, d20, getValueFromSelect } from "../algorithms/utilities";
+import { getValueFromSelect } from "../algorithms/utilities";
+import { REGIONS, SEASONS, setRandomWeather } from "../algorithms/weatherAlgorithms";
 import "./../styling/weather.scss";
 
-type Region = {
-    name: string,
-    terrain: "valley" | "mountains" | "foothills" | "forest" | "tundra" | "desert" | "oceanside" | "lake" | "plains"
-}
-
-const REGIONS: Region[] = [
-    {
-        name: "Dorwinion",
-        terrain: "lake"
-    },
-    {
-        name: "Lonely Mountain",
-        terrain: "lake"
-    },
-    {
-        name: "Mirkwood",
-        terrain: "forest"
-    },
-    {
-        name: "Misty Mountains",
-        terrain: "mountains"
-    },
-    {
-        name: "Misty Mountain Foothills",
-        terrain: "foothills"
-    },
-    {
-        name: "Rivendell",
-        terrain: "valley"
-    },
-    {
-        name: "Rohan",
-        terrain: "plains"
-    },
-    {
-        name: "Vales of Anduin",
-        terrain: "valley"
-    }
-]
-
-const SEASONS: string[] = [
-    "Winter",
-    "Spring",
-    "Summer",
-    "Fall"
-]
-
-function setRandomWeather() {
-    let region = getValueFromSelect("region");
-    let season = getValueFromSelect("season");
-    if (region == "Region" || season == "Season") {
-        document.getElementById("generatedWeather")!.innerText = "No Region or Season Selected";
-        return;
-    }
-    let temp = null;
-    let wind = null;
-    let precipitation = null;
-    // temp
-    let x = d20();
-    if (x < 15) temp = "normal";
-    else if (x < 18) temp = "cold";
-    else temp = "hot";
-    // wind
-    x = d20();
-    if (x < 13) wind = "no wind";
-    else if (x < 18) wind = "light winds";
-    else wind = "strong winds";
-    // precipitation
-    x = d20();
-    if (zone == "oceanside" || zone == "lake") x += 3; // precipitation is more likely nearby large bodies of water
-    else if (zone == "desert") x -= 3; // precipitation is less likely in dry zones
-    if (x < 13) precipitation = "clear skies";
-    else if (x < 18) precipitation = "light rain";
-    else precipitation = "heavy rain";
-
-    var zone = REGIONS.find(r => r.name == region)?.terrain;
-
-    // no hot in mountains in winter
-    if (season == "Winter" && (zone == "mountains" || zone == "foothills" || zone == "tundra")) {
-        if (temp == "normal") temp = "cold";
-        else if (temp == "hot") temp = "normal";
-        precipitation = precipitation.replace("rain", "snow");
-    }
-
-    if (temp != "normal") {
-        var mod = d4() * 10;
-        // hot -> extremely hot conditions:
-        // - hot + (high mod or summer)
-        // - hot region + fairly high mod
-        if (temp == "hot" && (zone == "desert" || mod == 40 ||
-        (mod == 30 && season == "Summer")) && zone != "oceanside") {
-            temp = "extremely hot";
-        }
-        // cold -> extremely cold conditions:
-        // - cold + (high mod or winter)
-        // - cold + cold region
-        else if (temp == "cold" && 
-        (zone == "mountains" || zone == "foothills" ||
-        zone == "tundra" || mod == 40 || (mod == 30 && season == "Winter")) && zone != "oceanside") {
-            temp = "extremely cold";
-            if (precipitation != "clear skies") precipitation = precipitation.replace("rain", "snow");
-        }
-    }
-
-    var outString = "The weather is " + temp + " with " + wind + " and " + precipitation + ".";
-    document.getElementById("generatedWeather")!.innerText = outString;
-}
-
 const WeatherPage: React.FC<PageProps> = () => {
+    const generateWeather = () => {
+        let res = setRandomWeather(getValueFromSelect("region"), getValueFromSelect("season"));
+        document.getElementById("generatedWeather")!.innerText = res;
+    }
+
     return (
         <Layout title = "        ">
             <h1>Weather</h1>
@@ -136,6 +34,10 @@ const WeatherPage: React.FC<PageProps> = () => {
             <hr/>
 
             <h3 id = "generator">Random Weather Generator</h3>
+            <p>
+                Note: The word usage here for temperature does not necessarily align with the temperature labels in the table below. The generated weather
+                should be adjusted and clarified to fit the table below when desired.
+            </p>
             <div className = "six columns offset-by-one column">
                 <select id = "region" defaultValue = {"Region"}>
                     <option value = "Region" disabled>Region</option>
@@ -150,7 +52,7 @@ const WeatherPage: React.FC<PageProps> = () => {
                 </select>
             </div>
             <p id = "generatedWeather" className = "output seven columns offset-by-one column"></p>
-            <button id = "generate" className = "three columns" onClick = {setRandomWeather}>Generate Weather</button>
+            <button id = "generate" className = "three columns" onClick = {generateWeather}>Generate Weather</button>
             <hr/>
 
             <h3 id = "mechanics">Mechanics</h3>
