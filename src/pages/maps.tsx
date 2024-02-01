@@ -12,7 +12,8 @@ const MapsPage: React.FC<PageProps> = () => {
             <h1>Maps</h1>
             <AnchorLinkBar hideWhenSmall = {true} links = {[
                 { name: "Middle Earth", url: "/maps#middleEarth" },
-                { name: "Vales of Anduin", url: "/maps#valesOfAnduin" }
+                { name: "Vales of Anduin", url: "/maps#valesOfAnduin" },
+                { name: "Rohan", url: "/maps#rohan" }
             ]}/>
             <hr/>
 
@@ -35,6 +36,18 @@ const MapsPage: React.FC<PageProps> = () => {
             <div className = "ten columns offset-by-one column">
                 <Zoom>
                     <StaticImage imgStyle = {{height: "100%", width: "100%"}} src = "../assets/valesOfAnduinMap.jpg" alt = "Map of the Vales of Anduin"/>
+                </Zoom>
+            </div>
+            <div className = "spacer"/>
+            <hr/>
+
+            <h3 id = "rohan">Rohan</h3>
+            <p>
+                Map created with Inkarnate by me.
+            </p>
+            <div className = "ten columns offset-by-one column">
+                <Zoom>
+                    <StaticImage imgStyle = {{height: "100%", width: "100%"}} src = "../assets/rohan.jpg" alt = "Map of Rohan"/>
                 </Zoom>
             </div>
             
