@@ -24,7 +24,8 @@ const CompanyPage: React.FC<PageProps> = () => {
                     <TabList>
                         <Tab>Freedom's Company</Tab>
                         <Tab>A Misgiving Start</Tab>
-                        <Tab>Reunion and Official Beginnings</Tab>
+                        <Tab>A Gathering Storm</Tab>
+                        <Tab>Enemies of the Company</Tab>
                     </TabList>
                     <TabPanel>
                         <h5>Members of Freedom's Company</h5>
@@ -33,34 +34,34 @@ const CompanyPage: React.FC<PageProps> = () => {
                         </p>
 
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/saelrain.png" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/company/saelrain.png" alt = ""/> <br/>
                             <b><u>Saelrain</u></b> <br/>
                             Elf of Rivendell, aka Elfindell, Chil-Damuth, Smith and Warrior
                         </span>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/luthais.jpg" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/company/luthais.jpg" alt = ""/> <br/>
                             <b><u>Luthais</u></b> <br/>
                             Avari Elf, aka Crusader, Blackthorn of the East, Opponent of the Shadow
                         </span>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/theorynWithHorse.png" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/company/theorynWithHorse.png" alt = ""/> <br/>
                             <b><u>Théoryn Silvertongue</u></b> <br/>
                             Human of Rohan, Daughter of Twisted Fate, Viol Extraordinaire, Bard and Storyteller
                         </span>
                         <div className = "break"/>
 
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/robinia.jpg" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/company/robinia.jpg" alt = ""/> <br/>
                             <b><u>Robinia Took</u></b> <br/>
                             Hobbit of Bree, Healer and Herbalist, Prancing Pony Beer Advocate
                         </span>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/verlorener.png" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/company/verlorener.png" alt = ""/> <br/>
                             <b><u>Verlorener</u></b> <br/>
                             Woodland Elf of Die Jäger der Dunkelheit, Lost Daughter of Forgotten Fate, Sharpshooting Archer
                         </span>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/arden.jpg" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/company/arden.jpg" alt = ""/> <br/>
                             <b><u>Arden</u></b> <br/>
                             Dwarf of Erebor, Stoneheart, Weapons Expert
                         </span>
@@ -71,12 +72,12 @@ const CompanyPage: React.FC<PageProps> = () => {
                             Freedom's Company had several notable allies who fought with them for a time, but were not long-term members.
                         </p>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/ingold.jpg" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/company/ingold.jpg" alt = ""/> <br/>
                             <b><u>Ingold</u></b> <br/>
                             Human from the Far North, Healer and Scholar, Servant of the Sky and Water, Mysterious Wanderer, Wizard
                         </span>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/vezenbaer.jpg" alt = ""/> <br/>
+                            <StaticImage src = "./../assets/company/vezenbaer.jpg" alt = ""/> <br/>
                             <b><u>Vezenbaer</u></b> <br/>
                             Beorning of Bärenburg, Daughter of Beormüd, Granddaughter of Beorn, Bearkin, Mighty Warrior
                         </span>
@@ -190,6 +191,42 @@ const CompanyPage: React.FC<PageProps> = () => {
                             connected to the name Freedom's Company. Saelrain and Luthais in particular earned the local monikers of Elfindell and Crusader. At some point during their stay in the Toft, Freedom's
                             Company were also rejoined by Ingold, his absence this time known with a fair amount of reliability: records suggest that he was the healer who prevented the plague outbreak in the village
                             of Oakville. Freedom's Company then left the Toft, entering the wilderness section of their long journey south.
+                            <br/><br/>
+                            Here Freedom's Company entered the wilderness between the Vale of Anduin and Rohan, then called the Brown Lands. Surviving records of this section of their journey are incomplete, but
+                            reveal a few notable points of interest to us. First, Arden rejoined the group somewhere along their journey, though if he revealed where he had been, it was not recorded. Next, Freedom's
+                            Company had an extraordinary meeting with the Vala Ulmo as they crossed the Anduin. What he said to them was not recorded in the surviving records. Third, they faced the Gibbet King again.
+                            Some scholars have proposed that Freedom's Company defeated him here, but we can find no evidence to show whether they faced the evil spirit before or after meeting with Ulmo, and it is
+                            clear from other evidence (See Chapter 13.4) that divine power was necessary to truly defeat him. We conclude from the available evidence that the most likely sequence of events is that
+                            they once more chased him off, destroying his vessel, and then met with Ulmo. The fourth and final salient point regarding this section of their journey is their encounter with Bain.
+                            This was the first time they had encountered him, though it is clear they at this time realized neither his true identity nor the significance of his presence. Eventually, Freedom's
+                            Company reached Edoras just before winter fell. There they met with Theoryn's old friend, the dwarf Aeor, and the elf Glorfindel. It is well established that Aeor was in Edoras searching
+                            for Theoryn, and spent the winter with her. It is not clear why Glorfindel left Rivendell for so long, but his presence in Edoras all winter is undisputable. We postulate that he came at
+                            either Saelrain or Luthais' request, but this cannot be verified.
+                        </p>
+                    </TabPanel>
+                    <TabPanel>
+                        <h5>Enemies of the Company</h5>
+                        <p>
+                            These are some of the notable enemies of Freedom's Company.
+                        </p>
+
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/enemies/valter.png" alt = ""/> <br/>
+                            <b><u>Valter</u></b> <br/>
+                        </span>
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/enemies/gibbetKing.png" alt = ""/> <br/>
+                            <b><u>The Gibbet King</u></b> <br/>
+                        </span>
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/enemies/bain.png" alt = ""/> <br/>
+                            <b><u>Bain</u></b> <br/>
+                        </span>
+
+                        <hr/>
+                        <h5>Image Disclaimer</h5>
+                        <p>
+                            None of the images on this page are mine. The artworks here are AI generated using Hotpot.ai.
                         </p>
                     </TabPanel>
                 </Tabs>

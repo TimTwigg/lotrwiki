@@ -23,7 +23,7 @@ const MapsPage: React.FC<PageProps> = () => {
             </p>
             <div className = "ten columns offset-by-one column">
                 <Zoom>
-                    <StaticImage imgStyle={{height: "100%", width: "100%"}} src = "../assets/middleEarthMap.jpg" alt = "Map of Middle Earth"/>
+                    <StaticImage imgStyle={{height: "100%", width: "100%"}} src = "../assets/maps/middleEarthMap.jpg" alt = "Map of Middle Earth"/>
                 </Zoom>
             </div>
             <div className = "spacer"/>
@@ -35,7 +35,7 @@ const MapsPage: React.FC<PageProps> = () => {
             </p>
             <div className = "ten columns offset-by-one column">
                 <Zoom>
-                    <StaticImage imgStyle = {{height: "100%", width: "100%"}} src = "../assets/valesOfAnduinMap.jpg" alt = "Map of the Vales of Anduin"/>
+                    <StaticImage imgStyle = {{height: "100%", width: "100%"}} src = "../assets/maps/valesOfAnduinMap.jpg" alt = "Map of the Vales of Anduin"/>
                 </Zoom>
             </div>
             <div className = "spacer"/>
@@ -47,7 +47,7 @@ const MapsPage: React.FC<PageProps> = () => {
             </p>
             <div className = "ten columns offset-by-one column">
                 <Zoom>
-                    <StaticImage imgStyle = {{height: "100%", width: "100%"}} src = "../assets/rohan.jpg" alt = "Map of Rohan"/>
+                    <StaticImage imgStyle = {{height: "100%", width: "100%"}} src = "../assets/maps/rohan.jpg" alt = "Map of Rohan"/>
                 </Zoom>
             </div>
             
