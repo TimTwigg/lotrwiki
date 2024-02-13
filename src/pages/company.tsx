@@ -211,22 +211,31 @@ const CompanyPage: React.FC<PageProps> = () => {
                         </p>
 
                         <span className = "profile four columns">
+                            <StaticImage src = "./../assets/enemies/feldush.png" alt = ""/> <br/>
+                            <b><u>Feldûsh</u></b> <br/>
+                            Orc champion in the Misty Mountains. Durman of the Second Shadow. Slain by Freedom's Company on 28 Lothron 02.
+                        </span>
+                        <span className = "profile four columns">
                             <StaticImage src = "./../assets/enemies/valter.png" alt = ""/> <br/>
                             <b><u>Valter</u></b> <br/>
+                            Bandit King in the Wolfswood. Defeated by Freedom's Company on 8 Ivanneth 02 (captured). Slain by an orc assassin on 14 Ivanneth 02.
                         </span>
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/enemies/gibbetKing.png" alt = ""/> <br/>
                             <b><u>The Gibbet King</u></b> <br/>
+                            Ancient spirit servant of Sauron, once the Dark Lord's executioner in Dol Guldur. Defeated once by Freedom's Company on 8 Ivanneth 02 (escaped). Defeated and destroyed by Freedom's Company
+                            on 15 Hithui 02.
                         </span>
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/enemies/bain.png" alt = ""/> <br/>
                             <b><u>Bain</u></b> <br/>
+                            Dark elven agent of the Second Shadow. Durman of the Second Shadow. Defeated once by Freedom's Company on 16 Hithui 02 (escaped).
                         </span>
 
                         <hr/>
                         <h5>Image Disclaimer</h5>
                         <p>
-                            None of the images on this page are mine. The artworks here are AI generated using Hotpot.ai.
+                            None of the images on this page are mine. The artworks here are AI generated using <a href = "https://hotpot.ai">Hotpot.ai</a>.
                         </p>
                     </TabPanel>
                 </Tabs>

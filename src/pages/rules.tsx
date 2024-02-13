@@ -74,9 +74,9 @@ const RulesPage: React.FC<PageProps> = () => {
             </p>
             <h5>Shove Aside</h5>
             <p>
-            With this option, a creature uses the special shove attack from the Player's Handbook to force a target to the side, rather than away. The attacker
-            has disadvantage on its Strength (Athletics) check when it does so. If that check is successful, the attacker moves the target 5 feet to a different
-            space within its reach.
+                With this option, a creature uses the special shove attack from the Player's Handbook to force a target to the side, rather than away. The attacker
+                has disadvantage on its Strength (Athletics) check when it does so. If that check is successful, the attacker moves the target 5 feet to a different
+                space within its reach.
             </p>
             <h5>Overrun/Tumble</h5>
             <p>
@@ -145,7 +145,7 @@ const RulesPage: React.FC<PageProps> = () => {
                     <b>Stumble</b> The force of your critical attack stumbles the target. Its next roll (i.e., attack, ability check, or saving throw) is made at disadvantage.
                 </li>
                 <li>
-                    <b>Swift Strike</b> The quickness of your attack has granted you an additional action this turn.
+                    <b>Swift Strike</b> The quickness of your attack has granted you an additional attack this turn.
                 </li>
             </ul>
             <hr/>
