@@ -81,11 +81,16 @@ const CompanyPage: React.FC<PageProps> = () => {
                             <b><u>Vezenbaer</u></b> <br/>
                             Beorning of Bärenburg, Daughter of Beormüd, Granddaughter of Beorn, Bearkin, Mighty Warrior
                         </span>
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/company/horn.jpg" alt = ""/> <br/>
+                            <b><u>Horn</u></b> <br/>
+                            Rider of Rohan, Wandering Farmer-turned-Warrior, Oathkeeper
+                        </span>
 
                         <hr/>
                         <h5>Image Disclaimer</h5>
                         <p>
-                            None of the images on this page are mine. The artworks here of Luthais, Theoryn, Robinia, Verlorener, Arden, and Ingold are AI generated.
+                            Most images on this page are AI generated.
                         </p>
                     </TabPanel>
                     <TabPanel>

@@ -35,7 +35,7 @@ const ApothecaryPage: React.FC<PageProps> = () => {
                     </tr>
                     <tr>
                         <td>Athelas Salve</td>
-                        <td>Heals 1d4 + 1 HP</td>
+                        <td>Heals 2d4 + 2 HP</td>
                     </tr>
                     <tr>
                         <td>Athelas Powder</td>
