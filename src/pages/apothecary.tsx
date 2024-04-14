@@ -159,6 +159,11 @@ const ApothecaryPage: React.FC<PageProps> = () => {
                         <td>Rohan</td>
                         <td>Heals 2d6 + 3 hit points and reduces temporary Shadow Points by 1. Can only be used once per Adventuring Phase</td>
                     </tr>
+                    <tr>
+                        <td>Ent Draught</td>
+                        <td>Ents</td>
+                        <td>The drinks of the Ents are made for Ents alone, but they grant some powerful effects when another creature drinks them, some even permanent...</td>
+                    </tr>
                 </tbody>
             </table>
         </Layout>
