@@ -234,7 +234,13 @@ const CompanyPage: React.FC<PageProps> = () => {
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/enemies/bain.png" alt = ""/> <br/>
                             <b><u>Bain</u></b> <br/>
-                            Dark elven agent of the Second Shadow. Durman of the Second Shadow. Defeated once by Freedom's Company on 16 Hithui 02 (escaped).
+                            Dark elven agent of the Second Shadow. Durman of the Second Shadow. Once named Callon (hero), brother of Verlorener. Defeated once by Freedom's Company on 16 Hithui 02 (escaped). Killed by
+                            Freedom's Company on 19 Gwaeron 03.
+                        </span>
+                        <span>
+                            <StaticImage src = "./../assets/enemies/shogrom.png" alt = ""/> <br/>
+                            <b><u>Shogrom</u></b> <br/>
+                            Orc commander of a large mercenary band. Servant of the Second Shadow.
                         </span>
 
                         <hr/>
