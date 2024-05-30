@@ -231,6 +231,8 @@ const CompanyPage: React.FC<PageProps> = () => {
                             Ancient spirit servant of Sauron, once the Dark Lord's executioner in Dol Guldur. Defeated once by Freedom's Company on 8 Ivanneth 02 (escaped). Defeated and destroyed by Freedom's Company
                             on 15 Hithui 02.
                         </span>
+                        <div className = "break"/>
+
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/enemies/bain.png" alt = ""/> <br/>
                             <b><u>Bain</u></b> <br/>
@@ -241,6 +243,18 @@ const CompanyPage: React.FC<PageProps> = () => {
                             <StaticImage src = "./../assets/enemies/shogrom.png" alt = ""/> <br/>
                             <b><u>Shogrom</u></b> <br/>
                             Orc commander of a large mercenary band. Servant of the Second Shadow.
+                        </span>
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/enemies/nazgul.jpg" alt = ""/> <br/>
+                            <b><u>The Nazgûl</u></b> <br/>
+                            The Servants of the Shadow. The Nine. The Black Riders. The Ringwraiths. The Nazgûl. The Witch King fell; Freedom's Company has sworn an oath to destroy the remaining eight...
+                        </span>
+                        <div className = "break"/>
+                        
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
+                            <b><u>The Enemy</u></b> <br/>
+                            The Second Shadow. Its identity is unknown. The most powerful beings in Middle Earth fear it. The Enemy is the reason Freedom's Company was formed.
                         </span>
 
                         <hr/>
