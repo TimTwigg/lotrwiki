@@ -145,7 +145,7 @@ const RulesPage: React.FC<PageProps> = () => {
                     <b>Stumble</b> The force of your critical attack stumbles the target. Its next roll (i.e., attack, ability check, or saving throw) is made at disadvantage.
                 </li>
                 <li>
-                    <b>Swift Strike</b> The quickness of your attack has granted you an additional attack this turn.
+                    <b>Swift Strike</b> The quickness of your attack has granted you an additional attack this turn. You may choose this effect only once per turn.
                 </li>
             </ul>
             <hr/>
