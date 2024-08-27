@@ -25,6 +25,7 @@ const CompanyPage: React.FC<PageProps> = () => {
                         <Tab>Freedom's Company</Tab>
                         <Tab>A Misgiving Start</Tab>
                         <Tab>A Gathering Storm</Tab>
+                        <Tab>A Chronicle of Victory</Tab>
                         <Tab>Enemies of the Company</Tab>
                     </TabList>
                     <TabPanel>
@@ -35,35 +36,30 @@ const CompanyPage: React.FC<PageProps> = () => {
 
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/company/saelrain.png" alt = ""/> <br/>
-                            <b><u>Saelrain</u></b> <br/>
-                            Elf of Rivendell, aka Elfindell, Chil-Damuth, Smith and Warrior
+                            <b><u>Saelrain Branastor Tânthalion</u></b> <br/>
+                            Elf of Rivendell, aka Elfindell, Chil-Damuth, Smith and Warrior, Leader of Eregion
                         </span>
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/company/luthais.jpg" alt = ""/> <br/>
                             <b><u>Luthais</u></b> <br/>
-                            Avari Elf, aka Crusader, Blackthorn of the East, Opponent of the Shadow
+                            Avari Elf, aka Crusader, Blackthorn of the East, Opponent of the Shadow, Redeemer of the Oppressed
                         </span>
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/company/theorynWithHorse.png" alt = ""/> <br/>
                             <b><u>Théoryn Silvertongue</u></b> <br/>
-                            Human of Rohan, Daughter of Twisted Fate, Viol Extraordinaire, Bard and Storyteller
+                            Human of Rohan, Daughter of Twisted Fate, Viol Extraordinaire, Bard and Storyteller Extroadinaire
                         </span>
                         <div className = "break"/>
 
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/company/robinia.jpg" alt = ""/> <br/>
-                            <b><u>Robinia Took</u></b> <br/>
-                            Hobbit of Bree, Healer and Herbalist, Prancing Pony Beer Advocate
-                        </span>
-                        <span className = "profile four columns">
                             <StaticImage src = "./../assets/company/verlorener.png" alt = ""/> <br/>
-                            <b><u>Verlorener</u></b> <br/>
-                            Woodland Elf of Die Jäger der Dunkelheit, Lost Daughter of Forgotten Fate, Sharpshooting Archer
+                            <b><u>Verlorener Menëlrîn</u></b> <br/>
+                            Elf of Die Jäger der Dunkelheit, Lost Daughter of Forgotten Fate, Sharpshooting Archer, Lady of Stars
                         </span>
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/company/arden.jpg" alt = ""/> <br/>
                             <b><u>Arden</u></b> <br/>
-                            Dwarf of Erebor, Stoneheart, Weapons Expert
+                            Dwarf of Erebor, Stoneheart, Weapons Expert, Advisor to the King, Leader of the Stonefists, Lord of Kazad-Dûm
                         </span>
 
                         <div className = "break"/>
@@ -72,15 +68,22 @@ const CompanyPage: React.FC<PageProps> = () => {
                             Freedom's Company had several notable allies who fought with them for a time, but were not long-term members.
                         </p>
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/company/ingold.jpg" alt = ""/> <br/>
-                            <b><u>Ingold</u></b> <br/>
-                            Human from the Far North, Healer and Scholar, Servant of the Sky and Water, Mysterious Wanderer, Wizard
+                            <StaticImage src = "./../assets/company/robinia.jpg" alt = ""/> <br/>
+                            <b><u>Robinia Took</u></b> <br/>
+                            Hobbit of Bree, Healer and Herbalist, Prancing Pony Beer Advocate, Journalist of the Wilds, Adventurer of Middle Earth, Ent-friend
                         </span>
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/company/vezenbaer.jpg" alt = ""/> <br/>
                             <b><u>Vezenbaer</u></b> <br/>
-                            Beorning of Bärenburg, Daughter of Beormüd, Granddaughter of Beorn, Bearkin, Mighty Warrior
+                            Beorning of Bärenburg, Daughter of Beormüd, Granddaughter of Beorn, Bearkin, Mighty Warrior, Dragon-slayer
                         </span>
+                        <span className = "profile four columns">
+                            <StaticImage src = "./../assets/company/ingold.jpg" alt = ""/> <br/>
+                            <b><u>Ingold</u></b> <br/>
+                            Human from the Far North, Healer and Scholar, Servant of the Sky and Water, Mysterious Wanderer, Wizard of Manwë and Ulmo
+                        </span>
+                        <div className = "break"/>
+
                         <span className = "profile four columns">
                             <StaticImage src = "./../assets/company/horn.jpg" alt = ""/> <br/>
                             <b><u>Horn</u></b> <br/>
@@ -198,8 +201,9 @@ const CompanyPage: React.FC<PageProps> = () => {
                             of Oakville. Freedom's Company then left the Toft, entering the wilderness section of their long journey south.
                             <br/><br/>
                             Here Freedom's Company entered the wilderness between the Vale of Anduin and Rohan, then called the Brown Lands. Surviving records of this section of their journey are incomplete, but
-                            reveal a few notable points of interest to us. First, Arden rejoined the group somewhere along their journey, though if he revealed where he had been, it was not recorded. Next, Freedom's
-                            Company had an extraordinary meeting with the Vala Ulmo as they crossed the Anduin. What he said to them was not recorded in the surviving records. Third, they faced the Gibbet King again.
+                            reveal a few notable points of interest to us. First, Arden rejoined the group somewhere along their journey, though if he revealed where he had been, it was not recorded. Soon afterwards,
+                            Freedom's Company supposedly had an extraordinary meeting with the Vala Ulmo as they crossed the Anduin. Whether this encounter really occurred is doubtful, and if it did then what he said
+                            to them was not recorded. However, it is clear that something occurred at this time which greatly strengthened the Company's resolve. Thirdly, they faced the Gibbet King again.
                             Some scholars have proposed that Freedom's Company defeated him here, but we can find no evidence to show whether they faced the evil spirit before or after meeting with Ulmo, and it is
                             clear from other evidence (See Chapter 13.4) that divine power was necessary to truly defeat him. We conclude from the available evidence that the most likely sequence of events is that
                             they once more chased him off, destroying his vessel, and then met with Ulmo. The fourth and final salient point regarding this section of their journey is their encounter with Bain.
@@ -207,6 +211,73 @@ const CompanyPage: React.FC<PageProps> = () => {
                             Company reached Edoras just before winter fell. There they met with Theoryn's old friend, the dwarf Aeor, and the elf Glorfindel. It is well established that Aeor was in Edoras searching
                             for Theoryn, and spent the winter with her. It is not clear why Glorfindel left Rivendell for so long, but his presence in Edoras all winter is undisputable. We postulate that he came at
                             either Saelrain or Luthais' request, but this cannot be verified.
+                        </p>
+                    </TabPanel>
+                    <TabPanel>
+                        <h5>Excerpt from <i>Chapter 7.13.1</i></h5>
+                        <p>
+                            The truth of the events surrounding the end of winter are difficult to reliably ascertain. The journal of a general, Olaf Brand, amongst the Rohirric King's Guard indicates that Freedom's
+                            Company traveled to the ancient Keep of Horses atop the Halifirien, where he was a captain at the time. However, Brand's writings indicate that the Company entered under false pretenses,
+                            assaulted the guards, and then left after discovering and accessing a small, long-lost loft in the keep. However, he also indicates that nothing was removed from the loft. The inconsistency
+                            of these reported acts with the character of Freedom's Company has led many to doubt Brand's account, yet we find Brand to be a reliable source in all other matters. Taking all available facts,
+                            our supposition is that Brand was not aware of the full story at the time, with the truth being somewhere in between the reported account and the character of the Company.
+                            <br/><br/>
+                            Upon their return to Edoras, Freedom's Company soon embarked on another, darker mission: the Dwimorberg. Although the reputation and history of the mountain is well known, the Company's entrance
+                            and exit of the haunted mountain cannot be disputed. Both the accounts of the Company themselves, as well as those of the Lord Hereward, his scribe, and several of the guards all verify this event.
+                            The presence of the spirit Rovgarn within the mountain is also known as historical fact. However, we dispute the Company's account of what occurred within the mountain. The accounts of Aragorn III,
+                            great grandson of Aragorn II and Arwen Undomiel, are inconsistent with the stories spread by Theoryn Silvertongue concerning the Company's purported conversation and deal with Rovgarn. Aragorn III,
+                            the first verified person of antiquity to speak with Rovgarn and live, reports a very different description of Rovgarn and his lair, as well as suggesting that Rovgarn himself denied any dealings with
+                            the Company. Why Theoryn would create such a fantastical story is unknown, but it seems likely to have been the invention of a storyteller looking to capture an audience's attention with a particularly
+                            wild and unusual story.
+                        </p>
+                        <h5>Excerpt from <i>Chapter 10.14: The Battle of Nan Curunir</i></h5>
+                        <p>
+                            Upon Lord Erkenbrand's arrival at the head of Nan Curunir, he was met by the mercenary company, Freedom's Company, whom he had sent out as advance scouts. Lord Arrov, one of Erkenbrand's captains,
+                            wrote in his memoirs of the subsequent council of war, saying:
+                        </p>
+                        <p className = "indent">
+                            "Our victory at the Battle of Nan Curunir was in no small part due to the accuracy of the intel provided by Freedom's Company, and the tactical genius of one of their members - Luthais Blackthorn.
+                            Despite our initial hesitancy to put such faith in one not of our people nor well known to us, the worth of his strategies could not long be denied. Despite my own objections at the time, Lord Erkenbrand
+                            decided to put full trust in the Blackthorn, and we acted on his instruction in the battle. Those strategies proved Erkenbrand's faith well-placed, as we victoriously defeated an army of uruks, trolls,
+                            and half-trolls far greater than we had expected, and with fewer losses than I could have hoped for. Indeed, his unorthodox tactics saved my own life during the battle. Freedom's Company themselves
+                            engaged the commanders of the dark army, and once reinforced on top of that hill by Erkenbrand's personal guard, were able to eliminate the orc Shogrom and his secondary commanders. With the head of
+                            the snake cut off, we soon won the day, though not without great cost."
+                        </p>
+                        <p>
+                            Arrov's account of this day sums the events, placing special emphasis on the roles of Luthais Blackthorn and Freedom's Company (see Chapter 7). We find Arrov to be a reliable source, corroborated by
+                            the stories told by Theoryn Silvertongue, as well as the famous A Rider's Tale, written by Aoelfwine Rablun, who was present in this battle.
+                        </p>
+                        <h5>Excerpt from <i>Chapter 7.13.6</i></h5>
+                        <p>
+                            Freedom's Company soon left Rivendell again, acting on Lord Elrond's instructions and traveling north to Angmar. They were accompanied by Elladan, Elrohir, and a small company of elven warriors. With
+                            their aid, Freedom's Company arrived at the cave of Ôrdrüth in Angmar. There they encountered the vampire Rodriguez, once a kinsmen of Edain (see Chapter 13.6). Freedom's Company was able to finally
+                            end the Vampire Lord, ending his reign of terror in the area. They subsequently descended into the depths of the lair. However, the Company's battle with Gothmog is badly documented. With the lack of
+                            independent eyewitness accounts, and the dubious nature of Theoryn Silvertongue's accounts from an antiquity standpoint, we can make no conclusive comment on this battle, save that it was surely a
+                            titanic one. The death of Gothmog is widely corroborated, so there can be no doubt that it was the deeds of Freedom's Company and the Elves of Rivendell that saved the world from the Second Shadow.
+                        </p>
+                        <h5>Excerpts from <i>Chapter 7.15</i></h5>
+                        <p>
+                            After their successful hunting of all eight remaining Nazgûl and the colddrake Chrysor, Freedom's Company found their purpose fulfilled…
+                            <br/><br/>
+                            …From the far spread reports and descriptions of him, it is clear that the crusader general, Luthais Blackthorn, continued to travel Middle Earth, combating evil where he found it. The precise details of
+                            his post-company life are unclear, as is the story of his end. All accounts of the Blackthorn cease entirely in the third millennium of the fourth age, though whether due to his death or simple departure
+                            from Middle Earth is unknown…
+                            <br/><br/>
+                            …The warrior-smith Saelrain, better known in later times as Branastor Tânthalion, remained for a long time in Rivendell, occasionally joining the Blackthorn in some endeavor, but for the most part becoming
+                            a smith of great fame. Many historians attribute the resettling of Eregion and its rise to an economic superpower in the early fifth age to his skill, influence, and leadership. Branastor finally left Middle
+                            Earth in the mid fifth age, joining his kin in the Second Exodus…
+                            <br/><br/>
+                            …Verlorener discovered her ancestry in Rivendell soon after the slaying of Gothmog - that of a Noldorin high elf. Her parents were elves of Eregion, descended from the Gondolindrim of the House of the Swallow.
+                            Their first child, a son named Callon ("hero"), was captured by orcs when young. He was tortured and eventually broken, and subsequently reforged into a servant of the Second Shadow. Verlorener's parents had
+                            been living amongst the elves of Dorwinion for a time hiding from him when he found them, and they were forced to flee. Callon, now called Bain and working with the Black Warg of Methedras, hunted them down and
+                            killed them, but her parents were able to keep her existence a secret from him… In later times after the revelation of her past, Verlorener took the name Menëlrîn ("lady of stars"), becoming a long-term resident
+                            of Rivendell until the Second Exodus…
+                            <br/><br/>
+                            …Theoryn Silvertongue returned to her travels after her adventures with the Company, visiting realms as far east as the Wild Woods, and as far south as the city of Mumakaah in the jungles of Far Harad. Theoryn
+                            was renowned for her storytelling abilities and magical songs. Although it is indisputable that many of her tales were exaggerated, she had great skill in capturing the imaginations, and hearts, of her audience…
+                            <br/><br/>
+                            …The Fall of Gothmog saw Arden's rise to power as the primary general of Erebor, and key advisor to King Thorin III Stonehelm. Arden's unique fighting style became popular amongst the younger dwarves, and his
+                            regiment became known as the Stonefists, later regarded as the most successful of all dwarven regiments in the fourth age. Under his leadership, the Stonefists also led the second retaking of Kazad-Dûm in 52 FA…
                         </p>
                     </TabPanel>
                     <TabPanel>
@@ -252,15 +323,15 @@ const CompanyPage: React.FC<PageProps> = () => {
                         <div className = "break"/>
                         
                         <span className = "profile four columns">
-                            <StaticImage src = "./../assets/user.png" alt = ""/> <br/>
-                            <b><u>The Enemy</u></b> <br/>
-                            The Second Shadow. Its identity is unknown. The most powerful beings in Middle Earth fear it. The Enemy is the reason Freedom's Company was formed.
+                            <StaticImage src = "./../assets/enemies/gothmog.jpg" alt = ""/> <br/>
+                            <b><u>Gothmog</u></b> <br/>
+                            Lord of Balrogs, The Second Shadow, Demon of Fire and Shadow. Defeated by Freedom's Company on 14 Gwirith 03.
                         </span>
 
                         <hr/>
                         <h5>Image Disclaimer</h5>
                         <p>
-                            None of the images on this page are mine. The artworks here are AI generated using <a href = "https://hotpot.ai">Hotpot.ai</a>.
+                            Most images on this page are AI generated.
                         </p>
                     </TabPanel>
                 </Tabs>
